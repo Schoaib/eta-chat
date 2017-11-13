@@ -1,0 +1,48 @@
+{
+    "name": "API.AI Facebook integration",
+    "description": "Api.ai Facebook integration allows you to create Facebook bots with natural language understanding based on Api.ai technology.",
+    "repository": "https://github.com/api-ai/api-ai-facebook",
+    "logo": "http://xvir.github.io/img/apiai.png",
+    "keywords": ["api.ai", "facebook", "natural language"],
+    "env": {
+        "APIAI_ACCESS_TOKEN": {
+            "description": "Client access token for Api.ai",
+            "value": "28866a2e57374dbe9df1363ece463d82"
+        },
+        "FB_VERIFY_TOKEN": {
+            "description": "Verification code",
+            "value": "emirates-ta"
+        },
+        "FB_PAGE_ACCESS_TOKEN": {
+            "description": "Page Access Token",
+            "value": "EAAFM1EaNv5sBAAThk3dbcZBzJciuKzeh8pqkZBhqtBvU7PdlmU3oudRcqJyMeDLfE7KiH1jQ0GjYsej221fipqquMZBXt4d9ZAJR9HzBmNKnJDBboMaXncP4QMiOxr65D9q18KMoBFUfU9xYbhRWKBJYBQaZBEdCDpTMLu6wKRQZDZD"
+        },
+        "APIAI_LANG": {
+            "description": "Agent language",
+            "value": "en",
+            "required": false
+        },
+        "API_URL": {
+            "description": "Social Perks Link",
+            "value": "https://demo1.loyally.io/webapi/v2"
+        },
+        "POS_API_URL": {
+            "description": "POS API Link",
+            "value": "https://demo1.loyally.io/"
+        },
+        "API_CLIENT": {
+            "description": "client name for api",
+            "value": "DFA"
+        },
+        "API_KEY": {
+            "description": "API_key for api",
+            "value": "0f4497d946fc4f3c95649fd7a6a7db22"
+        },"LOGIN_API": {
+            "description": "notify fb api",
+            "value": "https://yas-login-fb.herokuapp.com/"
+        }
+    },
+    "engines": {
+        "node": "5.10.1"
+    }
+}

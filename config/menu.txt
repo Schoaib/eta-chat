@@ -1,0 +1,87 @@
+//get started
+curl -X POST -H "Content-Type: application/json" -d '{
+  "setting_type":"call_to_actions",
+  "thread_state":"new_thread",
+  "call_to_actions":[
+    {
+      "payload":"GET_STARTED"
+    }
+  ]
+}' "https://graph.facebook.com/v2.6/me/thread_settings?access_token=EAAFW3JZAkjrwBALHjV5f81MhmKQNGkkRd2hOVoPXQo3XgfLR2QQ9yn61aAYqpgLej5ZCa9uhxvY3Vdbe5ruHAbYBlcmlevuGYxm1oRjrM0VZChYjZC4QmINOiQCRxtmqAvKGxAlBIw8jkE8K4K6RMHGd6Qhnclwz0aFdZAjNtvQZDZD"
+
+//Menu
+curl -X POST -H "Content-Type: application/json" -d '{
+"persistent_menu":[
+   {
+     "locale":"default",
+     "composer_input_disabled":true,
+  "call_to_actions":[
+    {
+      "type":"postback",
+      "title":"DFA Deals",
+      "payload":"SHOW_PUBLIC_DEALS"
+    }
+    {
+      "title":"More",
+       "type":"nested",
+       "call_to_actions":[
+{
+           "type":"postback",
+           "title":"History",
+           "payload":"HISTORY"
+         },
+       {
+         "type":"postback",
+         "title":"Restart Bot",
+         "payload":"GET_STARTED"
+       }
+         ]
+    }
+    ]
+    }
+}' "https://graph.facebook.com/v2.6/me/messenger_profile?access_token=EAAFW3JZAkjrwBAHxNP1TaaJZCbPGEE1sXlAV9Eal6GnKFM1ZCubhvTlm3StcCrgl5zKBQLec6kO09B9rBIUWv278rOeRzbQRdhvlXeOPoXxgtgHnCsHLxPxlZClJNYkZAnonuqbhWZCZAkHJgwZAJ01EDq87hPSmiXZBGUxJFcNOwiQZDZD"
+
+//Domain whitelisting
+curl -X POST -H "Content-Type: application/json" -d '{
+  "setting_type" : "domain_whitelisting",
+  "whitelisted_domains" : ["https://yas-login-fb.herokuapp.com/"],
+  "domain_action_type": "add"
+}' "https://graph.facebook.com/v2.6/me/thread_settings?access_token=EAAFW3JZAkjrwBALHjV5f81MhmKQNGkkRd2hOVoPXQo3XgfLR2QQ9yn61aAYqpgLej5ZCa9uhxvY3Vdbe5ruHAbYBlcmlevuGYxm1oRjrM0VZChYjZC4QmINOiQCRxtmqAvKGxAlBIw8jkE8K4K6RMHGd6Qhnclwz0aFdZAjNtvQZDZD"
+
+
+//New Menu
+curl -X POST -H "Content-Type: application/json" -d '{
+  "persistent_menu":[
+    {
+      "locale":"default",
+      "composer_input_disabled":false,
+      "call_to_actions":[
+      {
+        "type":"postback",
+        "title":"DFA Deals",
+        "payload":"SHOW_PUBLIC_DEALS"
+      },
+      {
+        "type":"postback",
+        "title":"DFA Deals Nearby",
+        "payload":"SHOW_PUBLIC_DEALS_NEARBY"
+      },
+      {
+                 "type":"postback",
+                 "title":"History",
+                 "payload":"HISTORY"
+               },
+      ],
+    }
+  ]
+}' "https://graph.facebook.com/v2.6/me/messenger_profile?access_token=EAAFW3JZAkjrwBALHjV5f81MhmKQNGkkRd2hOVoPXQo3XgfLR2QQ9yn61aAYqpgLej5ZCa9uhxvY3Vdbe5ruHAbYBlcmlevuGYxm1oRjrM0VZChYjZC4QmINOiQCRxtmqAvKGxAlBIw8jkE8K4K6RMHGd6Qhnclwz0aFdZAjNtvQZDZD"
+
+
+curl -X POST -H "Content-Type: application/json" -d '{
+  "greeting": [
+    {
+      "locale":"default",
+      "text":"Hello {{user_first_name}}, Welcome to DFA Deals Chat-bot, where you can view available discounts nearby and redeem them at participating outlets. Enjoy! ;)"
+    }
+  ]
+}' "https://graph.facebook.com/v2.6/me/messenger_profile?access_token=EAAFW3JZAkjrwBALHjV5f81MhmKQNGkkRd2hOVoPXQo3XgfLR2QQ9yn61aAYqpgLej5ZCa9uhxvY3Vdbe5ruHAbYBlcmlevuGYxm1oRjrM0VZChYjZC4QmINOiQCRxtmqAvKGxAlBIw8jkE8K4K6RMHGd6Qhnclwz0aFdZAjNtvQZDZD"
