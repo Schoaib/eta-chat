@@ -2057,7 +2057,7 @@ subtitle: 'Recent Transactions'
       getStarted2(sender);
       break;
     default:
-  
+
   }
 }
 
