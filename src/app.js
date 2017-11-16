@@ -649,14 +649,6 @@ function processEvent(event) {
             "update_type": "delay",
             "locale": "en_US",
             "pnr_number": "CF23G2",
-            "update_flight_info": {
-              "flight_number": "KL123",
-              "departure_airport": {
-                "airport_code": "SFO",
-                "city": "San Francisco",
-                "terminal": "T4",
-                "gate": "G8"
-              },
               "arrival_airport": {
                 "airport_code": "AMS",
                 "city": "Amsterdam",
