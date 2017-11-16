@@ -621,6 +621,9 @@ function processEvent(event) {
                 ]
               });
               break;
+              case 'flight.search':
+                console.log('flight.search',response.result.parameters)
+                break;
             default:
               console.log('responseText default', responseText)
               var splittedText = splitResponse(responseText);
