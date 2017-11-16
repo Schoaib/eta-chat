@@ -600,6 +600,10 @@ function processEvent(event) {
                 sendFBMessage(sender, {text: responseText});
               }
               break;
+              case 'flight.search':
+                console.log('inside flight')
+                console.log('flight.search',response.result.parameters)
+                break;
             case 'Menu':
               if (event.postback && event.postback.payload) {
                 receivedPostback(event);
@@ -621,9 +625,7 @@ function processEvent(event) {
                 ]
               });
               break;
-              case 'flight.search':
-                console.log('flight.search',response.result.parameters)
-                break;
+
             default:
               console.log('responseText default', responseText)
               var splittedText = splitResponse(responseText);
