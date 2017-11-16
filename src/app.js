@@ -600,10 +600,7 @@ function processEvent(event) {
                 sendFBMessage(sender, {text: responseText});
               }
               break;
-              case 'flight.search':
-                console.log('inside flight')
-                console.log('flight.search',response.result.parameters)
-                break;
+
             case 'Menu':
               if (event.postback && event.postback.payload) {
                 receivedPostback(event);
@@ -639,7 +636,10 @@ function processEvent(event) {
         } else {
           console.log('response.result.metadata.intentName', response.result.metadata.intentName)
           switch (response.result.metadata.intentName) {
-
+            case 'flight.search':
+              console.log('inside flight')
+              console.log('flight.search',response.result.parameters)
+              break;
             case 'Search':
               console.log('sender123', sender)
               console.log('responseText123', responseText)
