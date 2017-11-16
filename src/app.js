@@ -672,7 +672,7 @@ function processEvent(event) {
           }
         }
               };
-              sendFBMessage(sender,message);
+              sendFBMessage(sender,messageData);
 
               break;
             case 'Search':
