@@ -393,7 +393,7 @@ class FacebookBot {
                 {type:1 ,
                   imageUrl: "https://s3-ap-southeast-1.amazonaws.com/tempviafone/flight12.PNG",
                    title: "Best offer",
-                   subtitle: "AED 2410 <br> 1 Adult | Economy class",
+                   subtitle: "AED 2410 \r\n 1 Adult | Economy class",
                  buttons:[]},
                    {type:1 ,
                      imageUrl: "https://s3-ap-southeast-1.amazonaws.com/tempviafone/flight12.PNG",
