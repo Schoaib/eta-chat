@@ -358,16 +358,16 @@ class FacebookBot {
           if (action.search("smalltalk.greetings") > -1) {
             var greetFunc =function (that){
             async.waterfall([
-              function(callback) {
+              function(that,callback) {
                 bot.getUserProfile(sender, (err, profile) => {
                   if (!err) {
-                    callback(null, profile.first_name);
+                    callback(that,null, profile.first_name);
                   } else {
-                    callback(err)
+                    callback(that,err)
                   }
                 });
               },
-              function(err, name) {
+              function(that,err, name) {
                 if (name) {
                   responseMessages[0].speech = responseMessages[0].speech + ' ' + name + ' !';
                   that.doRichContentResponse(sender, responseMessages);
