@@ -391,12 +391,12 @@ class FacebookBot {
               console.log('parsedJSON',parsedJSON)
               var testJson = [
                 {type:1 ,
-                  imageUrl: "https://s3-ap-southeast-1.amazonaws.com/tempviafone/New-York.png",
+                  imageUrl: "https://s3-ap-southeast-1.amazonaws.com/tempviafone/flight1.png",
                    title: "title1",
                    subtitle: "subtitle1",
                  buttons:[]},
                    {type:1 ,
-                     imageUrl: "https://s3-ap-southeast-1.amazonaws.com/tempviafone/New-York.png",
+                     imageUrl: "https://s3-ap-southeast-1.amazonaws.com/tempviafone/flight2.png",
                       title: "title2", subtitle: "subtitle2",buttons:[]}];
               responseMessages=testJson;
               this.doRichContentResponse(sender, responseMessages);
