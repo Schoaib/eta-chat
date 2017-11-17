@@ -1,0 +1,16 @@
+Examples
+
+User: I need to fly from San Francisco to New York next Friday.
+User: Find me the cheapest flights to London for October 3.
+User: Are there still some non-stop flights to Colorado for Christmas?
+User: Any Virgin America flights from LA to Vegas this weekend?
+User: Search for refundable flights only.
+User: When will the flight from Rome depart?
+User: Is British Airways from Gatwick to Berlin arriving on time?
+User: Check status of AA flight 100.
+
+User: Find a flight from Dublin to Copenhagen on July 16, returning July 23, for 2 people.
+User: Actually, returning July 25.
+
+User: I need a one-way ticket to Zimbabwe, leaving tonight.
+User: Find a flight from Barcelona to Cagliari for less than 200 euro

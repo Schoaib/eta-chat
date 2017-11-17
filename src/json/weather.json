@@ -1,0 +1,7 @@
+"parameters": {
+    "address": {
+      "city": "New York"
+    },
+    "date-time": "2017-11-17T08:00:00Z/2017-11-17T12:00:00Z",
+    "unit": ""
+  }

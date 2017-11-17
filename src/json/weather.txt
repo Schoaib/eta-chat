@@ -1,0 +1,19 @@
+Examples
+
+User: What's the weather in New York this morning?
+User: What about Princeton tomorrow?
+
+User: Is it going to rain this Friday?
+User: How about Saturday?
+User: Can you check Seattle?
+
+User: Should I wear my coat?
+User: Is the weather good enough to play frisbee outside?
+
+User: Is hiking a good idea right now?
+User: How about this weekend?
+
+User: Do you know if it's cold outside now?
+User: Is it going to rain later in the evening?
+
+User: Will I need an umbrella next Friday in Paris?

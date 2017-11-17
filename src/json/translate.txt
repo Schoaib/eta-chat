@@ -1,0 +1,5 @@
+Examples
+
+User: Translate "I love you" into French.
+User: How do you say "Santa Claus" in Finnish?
+User: What's the German word for "breakfast"?
