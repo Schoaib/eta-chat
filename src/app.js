@@ -353,26 +353,29 @@ class FacebookBot {
                     let facebookResponseData = responseData.facebook;
                     this.doDataResponse(sender, facebookResponseData);
                 } else if (this.isDefined(responseMessages) && responseMessages.length > 0) {
-                    this.doRichContentResponse(sender, responseMessages);
-                }
-                else if (this.isDefined(responseText)) {
+
                   console.log('action',action)
+                  console.log('responseMessages',responseMessages)
                   if(action.search("smalltalk.greetings") > -1)
                   {
                     bot.getUserProfile(sender, function(err, profile) {
                       if (!err) {
                         console.log('profile', profile)
                         responseText = responseText + ' ' + profile.first_name + '!';
-                        this.doTextResponse(sender, responseText);
+                        this.doRichContentResponse(sender, responseText);
                       } else {
                         console.log('err', err)
                       }
                     });
                     }
                     else {
-                      this.doTextResponse(sender, responseText);
-                    }
 
+                    this.doRichContentResponse(sender, responseMessages);
+                  }
+                }
+                else if (this.isDefined(responseText)) {
+
+                      this.doTextResponse(sender, responseText);
                 }
 
             }
