@@ -393,11 +393,11 @@ class FacebookBot {
                 {type:1 ,
                   imageUrl: "https://s3-ap-southeast-1.amazonaws.com/tempviafone/flight12.PNG",
                    title: "Best Offer",
-                   subtitle: "AED 2410 <br>1 adult | Economy Class",
+                   subtitle: "AED 2410 <br> 1 adult | Economy Class",
                  buttons:[]},
                    {type:1 ,
                      imageUrl: "https://s3-ap-southeast-1.amazonaws.com/tempviafone/flight12.PNG",
-                      title: "CHeepest Offer", subtitle: "AED 2190<br>1 adult | Economy Class",buttons:[]}];
+                      title: "CHeepest Offer", subtitle: "AED 2190 \r\n 1 adult | Economy Class",buttons:[]}];
               responseMessages=testJson;
               this.doRichContentResponse(sender, responseMessages);
           }
