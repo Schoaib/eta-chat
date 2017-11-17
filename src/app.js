@@ -351,10 +351,10 @@ class FacebookBot {
         let parameters = response.result.parameters;
 
 
-        console.log('responseText', responseText)
-        console.log('responseData', responseData)
-        console.log('responseMessages', responseMessages)
-        console.log('action', action)
+        // console.log('responseText', responseText)
+        // console.log('responseData', responseData)
+        // console.log('responseMessages', responseMessages)
+        // console.log('action', action)
         if (this.isDefined(responseData) && this.isDefined(responseData.facebook)) {
           let facebookResponseData = responseData.facebook;
           this.doDataResponse(sender, facebookResponseData);
