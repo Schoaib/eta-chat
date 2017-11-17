@@ -348,7 +348,7 @@ class FacebookBot {
                 let responseText = response.result.fulfillment.speech;
                 let responseData = response.result.fulfillment.data;
                 let responseMessages = response.result.fulfillment.messages;
-
+                let action = response.result.action;
                 if (this.isDefined(responseData) && this.isDefined(responseData.facebook)) {
                     let facebookResponseData = responseData.facebook;
                     this.doDataResponse(sender, facebookResponseData);
@@ -356,7 +356,22 @@ class FacebookBot {
                     this.doRichContentResponse(sender, responseMessages);
                 }
                 else if (this.isDefined(responseText)) {
-                    this.doTextResponse(sender, responseText);
+                  if(action == 'smalltalk.greetings')
+                  {
+                    bot.getUserProfile(sender, function(err, profile) {
+                      if (!err) {
+                        console.log('profile', profile)
+                        responseText = responseText + ' ' + profile.first_name + '!';
+                        this.doTextResponse(sender, responseText);
+                      } else {
+                        console.log('err', err)
+                      }
+                    });
+                    }
+                    else {
+                      this.doTextResponse(sender, responseText);
+                    }
+
                 }
 
             }
