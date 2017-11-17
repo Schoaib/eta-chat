@@ -355,27 +355,26 @@ class FacebookBot {
 
           console.log('action', action)
           console.log('responseMessages', responseMessages)
+          var that = this;
           if (action.search("smalltalk.greetings") > -1) {
-            var greetFunc =function (that){
             async.waterfall([
-              function(that,callback) {
+              function(callback) {
                 bot.getUserProfile(sender, (err, profile) => {
                   if (!err) {
-                    callback(that,null, profile.first_name);
+                    callback(null, profile.first_name);
                   } else {
-                    callback(that,err)
+                    callback(err)
                   }
                 });
               },
-              function(that,err, name) {
+              function(err, name) {
                 if (name) {
                   responseMessages[0].speech = responseMessages[0].speech + ' ' + name + ' !';
                   that.doRichContentResponse(sender, responseMessages);
                 }
               }
             ]);
-          }
-          greetFunc.call(this)
+
           } else {
 
             this.doRichContentResponse(sender, responseMessages);
