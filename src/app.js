@@ -356,6 +356,7 @@ class FacebookBot {
           console.log('action', action)
           console.log('responseMessages', responseMessages)
           if (action.search("smalltalk.greetings") > -1) {
+            var greetFunc =function (that){
             async.waterfall([
               function(callback) {
                 bot.getUserProfile(sender, (err, profile) => {
@@ -369,11 +370,12 @@ class FacebookBot {
               function(err, name) {
                 if (name) {
                   responseMessages[0].speech = responseMessages[0].speech + ' ' + name + ' !';
-                  this.doRichContentResponse(sender, responseMessages);
+                  that.doRichContentResponse(sender, responseMessages);
                 }
               }
             ]);
-
+          }
+          greetFunc.call(this)
           } else {
 
             this.doRichContentResponse(sender, responseMessages);
