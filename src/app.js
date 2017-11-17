@@ -381,6 +381,7 @@ class FacebookBot {
               }
             });
           }else if(action.search("flight.search") > -1){
+              console.log('responseMessages',responseMessages)
               console.log('flight.search')
           }
            else {
