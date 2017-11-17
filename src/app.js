@@ -389,6 +389,16 @@ class FacebookBot {
               console.log('parameters',parameters)
               var parsedJSON = require('./json/flight.json');
               console.log('parsedJSON',parsedJSON)
+              var testJson = [
+                {type:1 ,
+                  imageUrl: "https://s3-ap-southeast-1.amazonaws.com/tempviafone/New-York.jpg",
+                   title: "title1",
+                   subtitle: "subtitle1"},
+                   {type:1 ,
+                     imageUrl: "https://s3-ap-southeast-1.amazonaws.com/tempviafone/New-York.jpg",
+                      title: "title2", subtitle: "subtitle2"}];
+              responseMessages=testJson;
+              this.doRichContentResponse(sender, responseMessages);
           }
            else {
             this.doRichContentResponse(sender, responseMessages);
