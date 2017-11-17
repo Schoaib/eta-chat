@@ -1,0 +1,48 @@
+[{
+    "airline": "",
+    "departure": "2017-11-17 09:10",
+    "arrival": "2017-11-17 19:00",
+    "from": {
+      "city": "Dubai",
+      "airport": "DXB"
+    },
+    "nonstop": "1 stop",
+    "price": "",
+    "refundable": "",
+    "sort": "",
+    "ticket-type": "",
+    "to": {
+      "city": "New York",
+      "airport": "JFK"
+    },
+    "flight-number": "EK205",
+    "plane": "A380",
+    "flight-duration": "18 hrs 50 mins",
+    "price": "AED 2190",
+    "image":"https://s3-ap-southeast-1.amazonaws.com/tempviafone/New-York.jpg"
+  },
+  {
+    "airline": "",
+    "departure": "2017-11-17 08:30",
+    "arrival": "2017-11-17 13:55",
+
+    "from": {
+      "city": "Dubai",
+      "airport": "DXB"
+    },
+    "nonstop": "nonstop",
+    "price": "",
+    "refundable": "",
+    "sort": "",
+    "ticket-type": "",
+    "to": {
+      "city": "New York",
+      "airport": "JFK"
+    },
+    "flight-number": "EK201",
+    "plane": "A380",
+    "flight-duration": "14 hrs 25 mins",
+    "price": "AED 2410",
+    "image" : "https://s3-ap-southeast-1.amazonaws.com/tempviafone/New-York.jpg"
+  }
+]

@@ -387,6 +387,8 @@ class FacebookBot {
               console.log('responseMessages',responseMessages)
               console.log('flight.search')
               console.log('parameters',parameters)
+              var parsedJSON = require('./json/flight.json');
+              console.log('parsedJSON',parsedJSON)
           }
            else {
             this.doRichContentResponse(sender, responseMessages);
