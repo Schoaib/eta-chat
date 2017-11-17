@@ -370,10 +370,10 @@ class FacebookBot {
               function(err, name) {
                 if (name) {
                   responseMessages[0].speech = responseMessages[0].speech + ' ' + name + ' !';
-                  that.doRichContentResponse(sender, responseMessages);
+                  this.doRichContentResponse(sender, responseMessages);
                 }
               }
-            ]);
+            ]).bind(this);
 
           } else {
 
