@@ -369,11 +369,12 @@ class FacebookBot {
               },
               function(err, name) {
                 if (name) {
+                  console.log('name',name)
                   responseMessages[0].speech = responseMessages[0].speech + ' ' + name + ' !';
-                  this.doRichContentResponse(sender, responseMessages);
+                  that.doRichContentResponse(sender, responseMessages);
                 }
               }
-            ]).bind(this);
+            ]);
 
           } else {
 
