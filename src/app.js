@@ -361,8 +361,8 @@ class FacebookBot {
                     bot.getUserProfile(sender, function(err, profile) {
                       if (!err) {
                         console.log('profile', profile)
-                        responseText = responseText + ' ' + profile.first_name + '!';
-                        this.doRichContentResponse(sender, responseText);
+                        responseMessages[0].speech = responseMessages[0].speech + ' ' + profile.first_name + '!';
+                        this.doRichContentResponse(sender, responseMessages);
                       } else {
                         console.log('err', err)
                       }
@@ -374,7 +374,6 @@ class FacebookBot {
                   }
                 }
                 else if (this.isDefined(responseText)) {
-
                       this.doTextResponse(sender, responseText);
                 }
 
