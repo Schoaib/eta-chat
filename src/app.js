@@ -348,6 +348,9 @@ class FacebookBot {
         let responseData = response.result.fulfillment.data;
         let responseMessages = response.result.fulfillment.messages;
         let action = response.result.action;
+        let parameters = response.result.parameters;
+
+
         console.log('responseText', responseText)
         console.log('responseData', responseData)
         console.log('responseMessages', responseMessages)
@@ -383,6 +386,7 @@ class FacebookBot {
           }else if(action.search("flight.search") > -1){
               console.log('responseMessages',responseMessages)
               console.log('flight.search')
+              console.log('parameters',parameters)
           }
            else {
             this.doRichContentResponse(sender, responseMessages);
