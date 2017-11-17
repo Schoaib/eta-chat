@@ -367,8 +367,22 @@ class FacebookBot {
                 that.doRichContentResponse(sender, responseMessages);
               }
             });
-          } else {
+          } else if(action.search("input.welcome") > -1) {
 
+
+
+            var that = this;
+            bot.getUserProfile(sender, function(err, profile) {
+              if (!err) {
+                responseMessages[0].speech = responseMessages[0].speech + ' ' + profile.first_name + '!';
+                responseMessages[0].speech = responseMessages[0].speech + ' Welcome to Emirates Travel Assistant.'
+                that.doRichContentResponse(sender, responseMessages);
+              } else {
+                console.log('err', err)
+                that.doRichContentResponse(sender, responseMessages);
+              }
+            });
+}else{
             this.doRichContentResponse(sender, responseMessages);
           }
         } else if (this.isDefined(responseText)) {
