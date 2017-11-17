@@ -393,7 +393,7 @@ class FacebookBot {
                 {type:1 ,
                   imageUrl: "https://s3-ap-southeast-1.amazonaws.com/tempviafone/New-York.jpg",
                    title: "title1",
-                   subtitle: "subtitle1"
+                   subtitle: "subtitle1",
                  buttons:[]},
                    {type:1 ,
                      imageUrl: "https://s3-ap-southeast-1.amazonaws.com/tempviafone/New-York.jpg",
