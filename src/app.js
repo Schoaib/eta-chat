@@ -356,6 +356,7 @@ class FacebookBot {
                     this.doRichContentResponse(sender, responseMessages);
                 }
                 else if (this.isDefined(responseText)) {
+                  console.log('action',action)
                   if(action.search("smalltalk.greetings") > -1)
                   {
                     bot.getUserProfile(sender, function(err, profile) {
