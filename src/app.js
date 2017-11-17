@@ -348,10 +348,10 @@ class FacebookBot {
         let responseData = response.result.fulfillment.data;
         let responseMessages = response.result.fulfillment.messages;
         let action = response.result.action;
-        console.log('responseText',responseText)
-        console.log('responseData',responseData)
-        console.log('responseMessages',responseMessages)
-        console.log('action',action)
+        console.log('responseText', responseText)
+        console.log('responseData', responseData)
+        console.log('responseMessages', responseMessages)
+        console.log('action', action)
         if (this.isDefined(responseData) && this.isDefined(responseData.facebook)) {
           let facebookResponseData = responseData.facebook;
           this.doDataResponse(sender, facebookResponseData);
@@ -367,9 +367,7 @@ class FacebookBot {
                 that.doRichContentResponse(sender, responseMessages);
               }
             });
-          } else if(action.search("input.welcome") > -1) {
-
-
+          } else if (action.search("input.welcome") > -1) {
 
             var that = this;
             bot.getUserProfile(sender, function(err, profile) {
@@ -382,7 +380,10 @@ class FacebookBot {
                 that.doRichContentResponse(sender, responseMessages);
               }
             });
-}else{
+          }else if (action.search("flight.search") > -1{
+              console.log('flight.search')
+          }
+           else {
             this.doRichContentResponse(sender, responseMessages);
           }
         } else if (this.isDefined(responseText)) {
