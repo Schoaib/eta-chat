@@ -94,7 +94,6 @@ class FacebookBot {
                     // speech: ["hi"]
                     // we have to get value from fulfillment.speech, because of here is raw speech
                     if (message.speech) {
-                        console.log('message',message)
                         let splittedText = this.splitResponse(message.speech);
 
                         splittedText.forEach(s => {
@@ -344,6 +343,7 @@ class FacebookBot {
 
     doApiAiRequest(apiaiRequest, sender) {
         apiaiRequest.on('response', (response) => {
+          console.log('response',response)
             if (this.isDefined(response.result) && this.isDefined(response.result.fulfillment)) {
                 let responseText = response.result.fulfillment.speech;
                 let responseData = response.result.fulfillment.data;
