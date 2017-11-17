@@ -19,7 +19,7 @@
     "plane": "A380",
     "flight-duration": "18 hrs 50 mins",
     "price": "AED 2190",
-    "image":"https://s3-ap-southeast-1.amazonaws.com/tempviafone/New-York.jpg"
+    "image":"https://s3-ap-southeast-1.amazonaws.com/tempviafone/New-York.png"
   },
   {
     "airline": "",
@@ -43,6 +43,6 @@
     "plane": "A380",
     "flight-duration": "14 hrs 25 mins",
     "price": "AED 2410",
-    "image" : "https://s3-ap-southeast-1.amazonaws.com/tempviafone/New-York.jpg"
+    "image" : "https://s3-ap-southeast-1.amazonaws.com/tempviafone/New-York.png"
   }
 ]
