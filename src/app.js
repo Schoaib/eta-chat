@@ -45,6 +45,10 @@ const FB_TEXT_LIMIT = 640;
 const FACEBOOK_LOCATION = "FACEBOOK_LOCATION";
 const FACEBOOK_WELCOME = "FACEBOOK_WELCOME";
 
+const FBBotFramework = require('fb-bot-framework');
+const bot = new FBBotFramework({page_token: config.get('env.FB_PAGE_ACCESS_TOKEN.value'), verify_token: config.get('env.FB_VERIFY_TOKEN.value')});
+
+
 class FacebookBot {
     constructor() {
         this.apiAiService = apiai(APIAI_ACCESS_TOKEN, {language: APIAI_LANG, requestSource: "fb"});
