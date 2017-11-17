@@ -380,7 +380,7 @@ class FacebookBot {
                 that.doRichContentResponse(sender, responseMessages);
               }
             });
-          }else if (action.search("flight.search") > -1{
+          }else if(action.search("flight.search") > -1){
               console.log('flight.search')
           }
            else {
