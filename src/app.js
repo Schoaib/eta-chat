@@ -94,7 +94,7 @@ class FacebookBot {
                     // speech: ["hi"]
                     // we have to get value from fulfillment.speech, because of here is raw speech
                     if (message.speech) {
-
+                        console.log('message',message)
                         let splittedText = this.splitResponse(message.speech);
 
                         splittedText.forEach(s => {
