@@ -359,7 +359,7 @@ class FacebookBot {
           if (action.search("smalltalk.greetings") > -1) {
             async.waterfall([
               function(callback) {
-                bot.getUserProfile(sender, (err, profile) => {
+                bot.getUserProfile(sender, function(err, profile){
                   if (!err) {
                     callback(null, profile.first_name);
                   } else {
