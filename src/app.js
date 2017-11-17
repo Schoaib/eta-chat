@@ -362,11 +362,11 @@ class FacebookBot {
                   console.log('responseMessages',responseMessages)
                   if(action.search("smalltalk.greetings") > -1)
                   {
-                    bot.getUserProfile(sender, function(err, profile) {
+                    bot.getUserProfile(sender, (err, profile) => {
                       if (!err) {
                         console.log('profile', profile)
                         responseMessages[0].speech = responseMessages[0].speech + ' ' + profile.first_name + '!';
-                        this.doRichContentResponse(sender, responseMessages);
+                        doRichContentResponse(sender, responseMessages);
                       } else {
                         console.log('err', err)
                       }
