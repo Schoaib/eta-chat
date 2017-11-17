@@ -392,12 +392,12 @@ class FacebookBot {
               var testJson = [
                 {type:1 ,
                   imageUrl: "https://s3-ap-southeast-1.amazonaws.com/tempviafone/flight12.PNG",
-                   title: "Best Offer",
-                   subtitle: "AED 2410 <br> 1 adult | Economy Class",
+                   title: "Best offer",
+                   subtitle: "AED 2410 <br> 1 Adult | Economy class",
                  buttons:[]},
                    {type:1 ,
                      imageUrl: "https://s3-ap-southeast-1.amazonaws.com/tempviafone/flight12.PNG",
-                      title: "CHeepest Offer", subtitle: "AED 2190 \r\n 1 adult | Economy Class",buttons:[]}];
+                      title: "Cheapest offer", subtitle: "AED 2190 \r\n 1 Adult | Economy class",buttons:[]}];
               responseMessages=testJson;
               this.doRichContentResponse(sender, responseMessages);
           }
