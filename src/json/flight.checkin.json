@@ -1,0 +1,40 @@
+[{
+  "type": 4,
+  "payload": {
+    "facebook": {
+      "attachment": {
+        "type": "template",
+        "payload": {
+          "template_type": "airline_checkin",
+          "intro_message": "Check-in is available now.",
+          "locale": "en_US",
+          "pnr_number": "QEWKNB",
+          "checkin_url": "https://mobile1.emirates.com/us/english/CKIN/OLCI/flightInfo.xhtml",
+          "flight_info": [{
+            "flight_number": "EK532",
+            "departure_airport": {
+              "airport_code": "DXB",
+              "city": "Dubai",
+              "terminal": "T3",
+              "gate": "B12"
+            },
+            "arrival_airport": {
+              "airport_code": "COK",
+              "city": "Kochi",
+              "terminal": "T4",
+              "gate": "G1"
+            },
+            "flight_schedule": {
+              "boarding_time": "2017-12-12T21:00",
+              "departure_time": "2017-12-12T21:30",
+              "arrival_time": "2017-12-13T03:05"
+            }
+          }]
+
+
+        }
+      }
+    }
+  }
+
+}]
