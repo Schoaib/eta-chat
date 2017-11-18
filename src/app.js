@@ -364,6 +364,7 @@ class FacebookBot {
               if (!err) {
                 responseMessages[0].speech = responseMessages[0].speech + ' ' + profile.first_name + '!';
                 that.doRichContentResponse(sender, responseMessages);
+                console.log('sender',sender)
               } else {
                 console.log('err', err)
                 that.doRichContentResponse(sender, responseMessages);
@@ -419,8 +420,7 @@ class FacebookBot {
                 ]
               }
             ];
-            responseMessages = testJson;
-            this.doRichContentResponse(sender, responseMessages);
+            this.doRichContentResponse(sender, testJson);
           } else if (action.search("PAY_LOAD") > -1) {
             if (resolvedQuery == "PRICE_ALERTS") {
               var customPaylod = [
@@ -634,6 +634,16 @@ app.get('/webhook/', (req, res) => {
   }
 });
 
+app.post('/sendBookingItinerary/', (req, res) => {
+  try {
+      var parsedJSON = require('./json/flight.json');
+      // this.doRichContentResponse("", parsedJSON);
+
+
+  } catch (err) {
+    return res.status(400).json({status: "error", error: err});
+  }
+});
 app.post('/webhook/', (req, res) => {
   try {
     const data = JSONbig.parse(req.body);
