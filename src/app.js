@@ -636,7 +636,8 @@ app.get('/webhook/', (req, res) => {
 
 app.get('/sendBookingItinerary', (req, res) => {
   try {
-      var parsedJSON = require('./json/flight.json');
+      var parsedJSON = require('./json/booking.itinerary.json');
+      console.log('parsedJSON',parsedJSON)
       this.doRichContentResponse("1503503856363974", parsedJSON);
   } catch (err) {
     return res.status(400).json({status: "error", error: err});
