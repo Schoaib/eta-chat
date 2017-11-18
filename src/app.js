@@ -635,6 +635,18 @@ app.get('/webhook/', (req, res) => {
   }
 });
 
+
+
+app.get('/sendFlightBoarding', (req, res) => {
+  try {
+      var parsedJSON = require('./json/flight.boarding.json');
+      console.log('parsedJSON',parsedJSON)
+      facebookBot.doRichContentResponse('1503503856363974', parsedJSON);
+  } catch (err) {
+    return res.status(400).json({status: "error", error: err});
+  }
+});
+
 app.get('/sendFlightCheckIn', (req, res) => {
   try {
       var parsedJSON = require('./json/flight.checkin.json');
