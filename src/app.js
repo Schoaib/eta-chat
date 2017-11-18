@@ -639,9 +639,9 @@ app.get('/sendBookingItinerary', (req, res) => {
   try {
       var parsedJSON = require('./json/booking.itinerary.json');
       console.log('parsedJSON',parsedJSON)
-      facebookBot.doTextResponse(sender, "You will no longer receive alerts for this fare.");
+      facebookBot.doTextResponse('1503503856363974', "You will no longer receive alerts for this fare.");
 
-      facebookBot.doRichContentResponse("1503503856363974", parsedJSON);
+      // facebookBot.doRichContentResponse("1503503856363974", parsedJSON);
   } catch (err) {
     return res.status(400).json({status: "error", error: err});
   }
