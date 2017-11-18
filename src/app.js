@@ -82,6 +82,7 @@ class FacebookBot {
   }
 
   doRichContentResponse(sender, messages) {
+    console.log('i am here')
     let facebookMessages = []; // array with result messages
 
     for (let messageIndex = 0; messageIndex < messages.length; messageIndex++) {
