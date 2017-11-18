@@ -634,12 +634,10 @@ app.get('/webhook/', (req, res) => {
   }
 });
 
-app.post('/sendBookingItinerary/', (req, res) => {
+app.get('/sendBookingItinerary', (req, res) => {
   try {
       var parsedJSON = require('./json/flight.json');
-      // this.doRichContentResponse("", parsedJSON);
-
-
+      this.doRichContentResponse("1503503856363974", parsedJSON);
   } catch (err) {
     return res.status(400).json({status: "error", error: err});
   }
