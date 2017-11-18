@@ -394,10 +394,24 @@ class FacebookBot {
                   imageUrl: "https://s3-ap-southeast-1.amazonaws.com/tempviafone/flight12.PNG",
                    title: "Best offer",
                    subtitle: "AED 2410 \r\n 1 Adult | Economy class",
-                 buttons:[]},
+                 buttons:[ { type: "web_url",
+                     url: "https://fly10.emirates.com/IBE.aspx?pub=/english&pageurl=/SelectPrice.aspx&section=IBE&showpage=true&TID=SB&seldcity1=DXB&selacity1=JFK&selddate1=26 Nov 2017&seladate1=07 Jan 2018&seladults=1&selchildren=0&selinfants=0&selcabinclasstype=Economy&selcabinclass=0&resultby=0&recentsearches=true&j=t&reasoncode=RecentSearch",
+                     title: "Book this flight"
+                   },{
+                       type: "postback",
+                       title: "Set price alerts",
+                       payload: "PRICE_ALERTS",
+                   }]},
                    {type:1 ,
                      imageUrl: "https://s3-ap-southeast-1.amazonaws.com/tempviafone/flight12.PNG",
-                      title: "Cheapest offer", subtitle: "AED 2190 \r\n 1 Adult | Economy class",buttons:[]}];
+                      title: "Cheapest offer", subtitle: "AED 2190 \r\n 1 Adult | Economy class",buttons:[ { type: "web_url",
+                          url: "https://fly10.emirates.com/IBE.aspx?pub=/english&pageurl=/SelectPrice.aspx&section=IBE&showpage=true&TID=SB&seldcity1=DXB&selacity1=JFK&selddate1=26 Nov 2017&seladate1=07 Jan 2018&seladults=1&selchildren=0&selinfants=0&selcabinclasstype=Economy&selcabinclass=0&resultby=0&recentsearches=true&j=t&reasoncode=RecentSearch",
+                          title: "Book this flight"
+                        },{
+                            type: "postback",
+                            title: "Set price alerts",
+                            payload: "PRICE_ALERTS",
+                        }]}];
               responseMessages=testJson;
               this.doRichContentResponse(sender, responseMessages);
           }
