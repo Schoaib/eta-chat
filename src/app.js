@@ -350,7 +350,6 @@ class FacebookBot {
         let action = response.result.action;
         let parameters = response.result.parameters;
 
-
         // console.log('responseText', responseText)
         // console.log('responseData', responseData)
         // console.log('responseMessages', responseMessages)
@@ -383,61 +382,75 @@ class FacebookBot {
                 that.doRichContentResponse(sender, responseMessages);
               }
             });
-          }else if(action.search("flight.search") > -1){
-              console.log('responseMessages',responseMessages)
-              console.log('flight.search')
-              console.log('parameters',parameters)
-              var parsedJSON = require('./json/flight.json');
-              console.log('parsedJSON',parsedJSON)
-              var testJson = [
-                {type:1 ,
-                  imageUrl: "https://s3-ap-southeast-1.amazonaws.com/tempviafone/flight12.PNG",
-                   title: "Best offer",
-                   subtitle: "AED 2410 \r\n 1 Adult | Economy class",
-                 buttons:[ {
-                     postback: "https://fly10.emirates.com/IBE.aspx?pub=/english&pageurl=/SelectPrice.aspx&section=IBE&showpage=true&TID=SB&seldcity1=DXB&selacity1=JFK&selddate1=26 Nov 2017&seladate1=07 Jan 2018&seladults=1&selchildren=0&selinfants=0&selcabinclasstype=Economy&selcabinclass=0&resultby=0&recentsearches=true&j=t&reasoncode=RecentSearch",
-                     text: "Book this flight"
-                   },{
-                       text: "Set price alerts",
-                       postback: "PRICE_ALERTS",
-                   }]},
-                   {type:1 ,
-                     imageUrl: "https://s3-ap-southeast-1.amazonaws.com/tempviafone/flight12.PNG",
-                      title: "Cheapest offer", subtitle: "AED 2190 \r\n 1 Adult | Economy class",buttons:[ {
-                          postback: "https://fly10.emirates.com/IBE.aspx?pub=/english&pageurl=/SelectPrice.aspx&section=IBE&showpage=true&TID=SB&seldcity1=DXB&selacity1=JFK&selddate1=26 Nov 2017&seladate1=07 Jan 2018&seladults=1&selchildren=0&selinfants=0&selcabinclasstype=Economy&selcabinclass=0&resultby=0&recentsearches=true&j=t&reasoncode=RecentSearch",
-                          text: "Book this flight"
-                        },{
-                            text: "Set price alerts",
-                            postback: "PRICE_ALERTS",
-                        }]}];
-              responseMessages=testJson;
-              this.doRichContentResponse(sender, responseMessages);
+          } else if (action.search("flight.search") > -1) {
+            console.log('responseMessages', responseMessages)
+            console.log('flight.search')
+            console.log('parameters', parameters)
+            var parsedJSON = require('./json/flight.json');
+            console.log('parsedJSON', parsedJSON)
+            var testJson = [
+              {
+                type: 1,
+                imageUrl: "https://s3-ap-southeast-1.amazonaws.com/tempviafone/flight12.PNG",
+                title: "Best offer",
+                subtitle: "AED 2410 \r\n 1 Adult | Economy class",
+                buttons: [
+                  {
+                    postback: "https://fly10.emirates.com/IBE.aspx?pub=/english&pageurl=/SelectPrice.aspx&section=IBE&showpage=true&TID=SB&seldcity1=DXB&selacity1=JFK&selddate1=26 Nov 2017&seladate1=07 Jan 2018&seladults=1&selchildren=0&selinfants=0&selcabinclasstype=Economy&selcabinclass=0&resultby=0&recentsearches=true&j=t&reasoncode=RecentSearch",
+                    text: "Book this flight"
+                  }, {
+                    text: "Set price alerts",
+                    postback: "PRICE_ALERTS"
+                  }
+                ]
+              }, {
+                type: 1,
+                imageUrl: "https://s3-ap-southeast-1.amazonaws.com/tempviafone/flight12.PNG",
+                title: "Cheapest offer",
+                subtitle: "AED 2190 \r\n 1 Adult | Economy class",
+                buttons: [
+                  {
+                    postback: "https://fly10.emirates.com/IBE.aspx?pub=/english&pageurl=/SelectPrice.aspx&section=IBE&showpage=true&TID=SB&seldcity1=DXB&selacity1=JFK&selddate1=26 Nov 2017&seladate1=07 Jan 2018&seladults=1&selchildren=0&selinfants=0&selcabinclasstype=Economy&selcabinclass=0&resultby=0&recentsearches=true&j=t&reasoncode=RecentSearch",
+                    text: "Book this flight"
+                  }, {
+                    text: "Set price alerts",
+                    postback: "PRICE_ALERTS"
+                  }
+                ]
+              }
+            ];
+            responseMessages = testJson;
+            this.doRichContentResponse(sender, responseMessages);
+          } else if (action.search("PRICE_ALERTS") > -1) {
+            var customPaylod = [{
+              type: 4,
+              payload: {
+                facebook: {
+                  "attachment": {
+                    "type": "template",
+                    "payload": {
+                      "template_type": "button",
+                      "text": "The alert is now set. We will check the price daily and inform you about changes.",
+                      "buttons": [
+                        {
+                          "type": "postback",
+                          "payload": "UN_SUBSCRIBE",
+                          "title": "Unsubscribe"
+                        }
+                      ]
+                    }
+
+                  }
+                }
+              }
+            }];
+
+            this.doRichContentResponse(sender, customPaylod);
+
+            // this.doTextResponse(sender, "");
+
           }
-           else if(action.search("PRICE_ALERTS") > -1){
-             var customPaylod = {type:4, payload: {facebook :{
-               "attachment":{
-      "type":"template",
-      "payload":{
-"template_type":"button",
-"text":"The alert is now set. We will check the price daily and inform you about changes.",
-"buttons":[
-  {
-    "type":"postback",
-    "payload":"UN_SUBSCRIBE",
-    "title":"Unsubscribe"
-  }
-]
-}
-
-    }
-             } } };
-
-             this.doRichContentResponse(sender, customPaylod);
-
-              // this.doTextResponse(sender, "");
-
-           }
-           {
+          {
             this.doRichContentResponse(sender, responseMessages);
           }
         } else if (this.isDefined(responseText)) {
@@ -488,7 +501,7 @@ class FacebookBot {
   }
 
   sendFBMessage(sender, messageData) {
-    console.log('messageData',messageData)
+    console.log('messageData', messageData)
     return new Promise((resolve, reject) => {
       request({
         url: 'https://graph.facebook.com/v2.6/me/messages',
