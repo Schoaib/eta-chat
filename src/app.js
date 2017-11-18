@@ -349,7 +349,7 @@ class FacebookBot {
         let responseMessages = response.result.fulfillment.messages;
         let action = response.result.action;
         let parameters = response.result.parameters;
-
+        let resolvedQuery = response.result.resolvedQuery;
         // console.log('responseText', responseText)
         // console.log('responseData', responseData)
         // console.log('responseMessages', responseMessages)
@@ -421,36 +421,40 @@ class FacebookBot {
             ];
             responseMessages = testJson;
             this.doRichContentResponse(sender, responseMessages);
-          } else if (action.search("PRICE_ALERTS") > -1) {
-            var customPaylod = [{
-              type: 4,
-              payload: {
-                facebook: {
-                  "attachment": {
-                    "type": "template",
-                    "payload": {
-                      "template_type": "button",
-                      "text": "The alert is now set. We will check the price daily and inform you about changes.",
-                      "buttons": [
-                        {
-                          "type": "postback",
-                          "payload": "UN_SUBSCRIBE",
-                          "title": "Unsubscribe"
+          } else if (action.search("PAY_LOAD") > -1) {
+            if (resolvedQuery == "PRICE_ALERTS") {
+              var customPaylod = [
+                {
+                  type: 4,
+                  payload: {
+                    facebook: {
+                      "attachment": {
+                        "type": "template",
+                        "payload": {
+                          "template_type": "button",
+                          "text": "The alert is now set. We will check the price daily and inform you about changes.",
+                          "buttons": [
+                            {
+                              "type": "postback",
+                              "payload": "UN_SUBSCRIBE",
+                              "title": "Unsubscribe"
+                            }
+                          ]
                         }
-                      ]
-                    }
 
+                      }
+                    }
                   }
                 }
-              }
-            }];
+              ];
 
-            this.doRichContentResponse(sender, customPaylod);
+              this.doRichContentResponse(sender, customPaylod);
+            } else if (resolvedQuery == "UN_SUBSCRIBE") {
+              this.doTextResponse(sender, "You will no longer receive alerts for this fare.");
 
-            // this.doTextResponse(sender, "");
+            }
 
-          }
-          {
+          } else {
             this.doRichContentResponse(sender, responseMessages);
           }
         } else if (this.isDefined(responseText)) {
