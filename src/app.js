@@ -413,7 +413,12 @@ class FacebookBot {
               responseMessages=testJson;
               this.doRichContentResponse(sender, responseMessages);
           }
-           else {
+           else if(action.search("PRICE_ALERTS") > -1){
+
+              this.doTextResponse(sender, "The alert is now set. We will check the price daily and inform you about changes.");
+
+           }
+           {
             this.doRichContentResponse(sender, responseMessages);
           }
         } else if (this.isDefined(responseText)) {
