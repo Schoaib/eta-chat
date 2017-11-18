@@ -414,8 +414,27 @@ class FacebookBot {
               this.doRichContentResponse(sender, responseMessages);
           }
            else if(action.search("PRICE_ALERTS") > -1){
+             var customPaylod = {type:4, payload: {facebook :{
+               "attachment":{
+      "type":"template",
+      "payload":{
+"template_type":"button",
+"text":"The alert is now set. We will check the price daily and inform you about changes.",
+"buttons":[
+  {
+    "type":"postback",
+    "payload":"UN_SUBSCRIBE",
+    "title":"Unsubscribe"
+  }
+]
+}
 
-              this.doTextResponse(sender, "The alert is now set. We will check the price daily and inform you about changes.");
+    }
+             } } };
+
+             this.doRichContentResponse(sender, customPaylod);
+
+              // this.doTextResponse(sender, "");
 
            }
            {
