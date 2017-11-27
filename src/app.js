@@ -40,6 +40,15 @@ const FB_VERIFY_TOKEN = (process.env.FB_VERIFY_TOKEN)
 const FB_PAGE_ACCESS_TOKEN = (process.env.FB_PAGE_ACCESS_TOKEN)
   ? process.env.FB_PAGE_ACCESS_TOKEN
   : config.get('env.FB_PAGE_ACCESS_TOKEN.value');
+
+const WEATHER_API = (process.env.WEATHER_API)
+  ? process.env.WEATHER_API
+  : config.get('env.WEATHER_API.value');
+
+const TRANSLATION_API = (process.env.TRANSLATION_API)
+  ? process.env.TRANSLATION_API
+  : config.get('env.TRANSLATION_API.value');
+
 const FB_TEXT_LIMIT = 640;
 
 const FACEBOOK_LOCATION = "FACEBOOK_LOCATION";
@@ -351,6 +360,9 @@ class FacebookBot {
         let action = response.result.action;
         let parameters = response.result.parameters;
         let resolvedQuery = response.result.resolvedQuery;
+        // if (response.result.contexts) {
+        //
+        // }
         // console.log('responseText', responseText)
         // console.log('responseData', responseData)
         // console.log('responseMessages', responseMessages)
@@ -365,19 +377,19 @@ class FacebookBot {
               if (!err) {
                 responseMessages[0].speech = responseMessages[0].speech + ' ' + profile.first_name + '!';
                 that.doRichContentResponse(sender, responseMessages);
-                console.log('sender',sender)
+                console.log('sender', sender)
               } else {
                 console.log('err', err)
                 that.doRichContentResponse(sender, responseMessages);
               }
             });
           } else if (action.search("input.welcome") > -1) {
-
+            cosnole.log('inside input.welcome')
             var that = this;
             bot.getUserProfile(sender, function(err, profile) {
               if (!err) {
                 responseMessages[0].speech = responseMessages[0].speech + ' ' + profile.first_name + '!';
-                responseMessages[0].speech = responseMessages[0].speech + ' Welcome to Emirates Travel Assistant.'
+                responseMessages[0].speech = responseMessages[0].speech + ' Welcome to Emirates Travel Assistant, your one stop shop for all your travel needs where you can search for flights, book your hotels and experiences on the discounted price, Translate phrases to and from languages, get weather updates.Furthermore search for sights, entertainment, transportation, local services and shops and more. Enjoy! ;)'
                 that.doRichContentResponse(sender, responseMessages);
               } else {
                 console.log('err', err)
@@ -454,6 +466,39 @@ class FacebookBot {
               this.doTextResponse(sender, "You will no longer receive alerts for this fare.");
 
             }
+
+          } else if (action.search("weather") > -1) {
+            console.log('responseMessages', responseMessages)
+            console.log('parameters', parameters)
+            var that = this;
+            var client = new Client();
+            var args = {
+              headers: {
+                "Content-Type": "application/json"
+              }
+            };
+
+            console.log('parameters', parameters)
+            if (!parameters.date_time) {
+              parameters.date_time = new Date().toISOString();
+            } else {
+              parameters.date_time = new Date(parameters.date_time).toISOString();
+            }
+
+            if (!parameters.address)
+              parameters.address.city = 'Dubai'
+
+            args.data = parameters;
+
+            client.post(WEATHER_API + 'getWeather', args, function(data, response) {
+              console.log('data', data)
+              if (data && data.responseText) {
+                that.doTextResponse(sender, data.responseText);
+              } else {
+                that.doTextResponse(sender, "Can you please be more specific?");
+              }
+
+            })
 
           } else {
             this.doRichContentResponse(sender, responseMessages);
@@ -635,13 +680,11 @@ app.get('/webhook/', (req, res) => {
   }
 });
 
-
-
 app.get('/sendFlightBoarding', (req, res) => {
   try {
-      var parsedJSON = require('./json/flight.boarding.json');
-      console.log('parsedJSON',parsedJSON)
-      facebookBot.doRichContentResponse('1503503856363974', parsedJSON);
+    var parsedJSON = require('./json/flight.boarding.json');
+    console.log('parsedJSON', parsedJSON)
+    facebookBot.doRichContentResponse('1503503856363974', parsedJSON);
   } catch (err) {
     return res.status(400).json({status: "error", error: err});
   }
@@ -649,9 +692,9 @@ app.get('/sendFlightBoarding', (req, res) => {
 
 app.get('/sendFlightCheckIn', (req, res) => {
   try {
-      var parsedJSON = require('./json/flight.checkin.json');
-      console.log('parsedJSON',parsedJSON)
-      facebookBot.doRichContentResponse('1503503856363974', parsedJSON);
+    var parsedJSON = require('./json/flight.checkin.json');
+    console.log('parsedJSON', parsedJSON)
+    facebookBot.doRichContentResponse('1503503856363974', parsedJSON);
   } catch (err) {
     return res.status(400).json({status: "error", error: err});
   }
@@ -659,11 +702,11 @@ app.get('/sendFlightCheckIn', (req, res) => {
 
 app.get('/sendBookingItinerary', (req, res) => {
   try {
-      var parsedJSON = require('./json/booking.itinerary.json');
-      console.log('parsedJSON',parsedJSON)
-      // facebookBot.doTextResponse('1503503856363974', "You will no longer receive alerts for this fare.");
+    var parsedJSON = require('./json/booking.itinerary.json');
+    console.log('parsedJSON', parsedJSON)
+    // facebookBot.doTextResponse('1503503856363974', "You will no longer receive alerts for this fare.");
 
-      facebookBot.doRichContentResponse('1503503856363974', parsedJSON);
+    facebookBot.doRichContentResponse('1503503856363974', parsedJSON);
   } catch (err) {
     return res.status(400).json({status: "error", error: err});
   }

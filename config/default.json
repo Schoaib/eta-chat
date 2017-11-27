@@ -40,6 +40,12 @@
         },"LOGIN_API": {
             "description": "notify fb api",
             "value": "https://yas-login-fb.herokuapp.com/"
+        }, "WEATHER_API": {
+          "description": "notify fb api",
+          "value": "https://immense-inlet-26244.herokuapp.com/travelassistant/"
+        }, "TRANSLATION_API": {
+          "description": "notify fb api",
+          "value": "https://immense-inlet-26244.herokuapp.com/travelassistant/"
         }
     },
     "engines": {

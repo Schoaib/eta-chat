@@ -44,7 +44,7 @@ curl -X POST -H "Content-Type: application/json" -d '{
 //Domain whitelisting
 curl -X POST -H "Content-Type: application/json" -d '{
   "setting_type" : "domain_whitelisting",
-  "whitelisted_domains" : ["https://s3-ap-southeast-1.amazonaws.com"],
+  "whitelisted_domains" : ["https://fly10.ek.aero"],
   "domain_action_type": "add"
 }' "https://graph.facebook.com/v2.6/me/thread_settings?access_token=EAACDcONKDisBACxYcIRZBAVZCjqtFzvDms7ykFxmC9yTaPvlZAcqlsvzszSZBN2uZA5ntYoKZAO9dSHHA0NyZCz4nWoQ10drNrKB9J0UCjS6vYdZBB0AK3Y0b4DgLdjpDljd7pZAwUF10HgtxzKZB18na6o2Cgn7NkpFXMBmx5l5sCVwZDZD"
 
