@@ -392,7 +392,7 @@ class FacebookBot {
                 // responseMessages[0].speech = responseMessages[0].speech + ' Welcome to Emirates Travel Assistant, your one stop shop for all your travel needs where you can search for flights, book your hotels and experiences on the discounted price, Translate phrases to and from languages, get weather updates.Furthermore search for sights, entertainment, transportation, local services and shops and more. Enjoy! ;)'
                 // console.log('responseMessages',responseMessages)
                 // that.doRichContentResponse(sender, responseMessages);
-                this.doTextResponse(sender, "Hi " + profile.first_name + '! Welcome to Emirates Travel Assistant, your one stop shop for all your travel needs where you can search for flights, book your hotels and experiences on the discounted price, Translate phrases to and from languages, get weather updates.Furthermore search for sights, entertainment, transportation, local services and shops and more. Enjoy! ;)' );
+                that.doTextResponse(sender, "Hi " + profile.first_name + '! Welcome to Emirates Travel Assistant, your one stop shop for all your travel needs where you can search for flights, book your hotels and experiences on the discounted price, Translate phrases to and from languages, get weather updates.Furthermore search for sights, entertainment, transportation, local services and shops and more. Enjoy! ;)' );
 
               } else {
                 console.log('err', err)
