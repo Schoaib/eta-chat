@@ -384,12 +384,13 @@ class FacebookBot {
               }
             });
           } else if (action.search("input.welcome") > -1) {
-            cosnole.log('inside input.welcome')
+            console.log('inside input.welcome')
             var that = this;
             bot.getUserProfile(sender, function(err, profile) {
               if (!err) {
                 responseMessages[0].speech = responseMessages[0].speech + ' ' + profile.first_name + '!';
                 responseMessages[0].speech = responseMessages[0].speech + ' Welcome to Emirates Travel Assistant, your one stop shop for all your travel needs where you can search for flights, book your hotels and experiences on the discounted price, Translate phrases to and from languages, get weather updates.Furthermore search for sights, entertainment, transportation, local services and shops and more. Enjoy! ;)'
+                console.log('responseMessages',responseMessages)
                 that.doRichContentResponse(sender, responseMessages);
               } else {
                 console.log('err', err)
