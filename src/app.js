@@ -571,7 +571,7 @@ class FacebookBot {
               data = JSON.parse(data)
               console.log('data', data)
 
-              if(data && data[0] != null)
+              if(data && data[0] != null && !data.Message)
               {
                     data.forEach(function(v,i) {
                          data[i].type = 1
