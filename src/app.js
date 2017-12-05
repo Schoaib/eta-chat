@@ -568,7 +568,7 @@ class FacebookBot {
             client.get(LOCATION_API + resolvedQuery, function(data, response) {
               console.log('data', data)
               if(data)
-              this.doRichContentResponse(sender, JSON.parse(data));
+              that.doRichContentResponse(sender, JSON.parse(data));
               // if (data && data.data && data.data.translations) {
               //   // that.doTextResponse(sender, data.data.translations[0].translatedText);
               // } else {
