@@ -509,6 +509,9 @@ class FacebookBot {
               parameters.address = {city : parameters.address['business-name']}
             }
 
+            if (!parameters.outfit)
+              parameters.outfit = ''
+
             args.data = parameters;
 
             console.log('args.data', args.data)
