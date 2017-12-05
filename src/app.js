@@ -525,7 +525,32 @@ class FacebookBot {
 
             })
 
-          } else {
+          } else if (action.search("translate") > -1) {
+            console.log('parameters', parameters)
+            var that = this;
+            var client = new Client();
+            var args = {
+              headers: {
+                "Content-Type": "application/json"
+              }
+            };
+
+            args.data = {
+              "target": parameters['lang-to'],
+              "text": parameters.text
+            };
+            console.log('args.data', args.data)
+            client.post(WEATHER_API + 'translateLan', args, function(data, response) {
+              console.log('data', data)
+              if (data && data.responseText) {
+                that.doTextResponse(sender, data.responseText);
+              } else {
+                that.doTextResponse(sender, "Can you please be more specific?");
+              }
+
+            })
+
+          }else {
             this.doRichContentResponse(sender, responseMessages);
           }
         } else if (this.isDefined(responseText)) {
