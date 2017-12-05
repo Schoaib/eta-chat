@@ -186,6 +186,7 @@ class FacebookBot {
                 };
               }
 
+              console.log('card',card)
               facebookMessage.attachment.payload.elements.push(card);
             });
 
@@ -566,7 +567,7 @@ class FacebookBot {
             var client = new Client();
 
             client.get(LOCATION_API + resolvedQuery, function(data, response) {
-              console.log('data', data)
+              // console.log('data', data)
               data = JSON.parse(data)
               if(data)
               {
@@ -576,7 +577,7 @@ class FacebookBot {
                          data[i].buttons =[{text: "Website", postback: data[i].website}]
 
                       });
-              console.log('data',data)
+              // console.log('data',data)
               that.doRichContentResponse(sender,data);
             }
             })
