@@ -486,7 +486,6 @@ class FacebookBot {
             }
 
           } else if (action.search("weather") > -1) {
-            console.log('responseMessages', responseMessages)
             console.log('parameters', parameters)
             var that = this;
             var client = new Client();
@@ -496,7 +495,6 @@ class FacebookBot {
               }
             };
 
-            console.log('parameters', parameters)
             if (parameters.date_time) {
               parameters.date_time = new Date(parameters.date_time).toISOString();
             }
@@ -504,12 +502,14 @@ class FacebookBot {
             if (!parameters.address || parameters.address == '')
               parameters.address = {city : 'Dubai'}
 
-            if(parameters.address && parameters.address["business-name"])
+            if(parameters.address && parameters.address['business-name'])
             {
-              parameters.address = {city : parameters.address["business-name"]}
+              parameters.address = {city : parameters.address['business-name']}
             }
+            
             args.data = parameters;
 
+            console.log('args.data', args.data)
             client.post(WEATHER_API + 'getWeather', args, function(data, response) {
               console.log('data', data)
               if (data && data.responseText) {
