@@ -571,11 +571,11 @@ class FacebookBot {
               if(data)
               {
                     data.forEach(function(v,i) {
-                         data[i].type = 1;
-                         data[i].buttons: [ {text: "Website", postback: data[i].website} ]
+                         data[i].type = 1
+                         data[i].buttons =[{text: "Website", postback: data[i].website}]
 
                       });
-              that.doRichContentResponse(sender,data));
+              that.doRichContentResponse(sender,data);
             }
             })
 
