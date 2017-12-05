@@ -576,6 +576,7 @@ class FacebookBot {
                          data[i].buttons =[{text: "Website", postback: data[i].website}]
 
                       });
+              console.log('data',data)
               that.doRichContentResponse(sender,data);
             }
             })
