@@ -497,6 +497,8 @@ class FacebookBot {
 
             if (parameters.date_time) {
               parameters.date_time = new Date(parameters.date_time).toISOString();
+            }else {
+              parameters.date_time = new Date().toISOString();
             }
 
             if (!parameters.address || parameters.address == '')
@@ -506,7 +508,7 @@ class FacebookBot {
             {
               parameters.address = {city : parameters.address['business-name']}
             }
-            
+
             args.data = parameters;
 
             console.log('args.data', args.data)
