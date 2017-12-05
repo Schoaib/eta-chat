@@ -568,13 +568,12 @@ class FacebookBot {
             client.get(LOCATION_API + resolvedQuery, function(data, response) {
               console.log('data', data)
               if(data)
+              {
+                    data.forEach(function(v,i) {
+                         data[i].type = 1;
+                      });
               that.doRichContentResponse(sender, JSON.parse(data));
-              // if (data && data.data && data.data.translations) {
-              //   // that.doTextResponse(sender, data.data.translations[0].translatedText);
-              // } else {
-              //   that.doTextResponse(sender, "Can you please be more specific?");
-              // }
-
+            }
             })
 
           } else {
