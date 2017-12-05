@@ -41,12 +41,17 @@
             "description": "notify fb api",
             "value": "https://yas-login-fb.herokuapp.com/"
         }, "WEATHER_API": {
-          "description": "notify fb api",
+          "description": "Weather API",
           "value": "https://immense-inlet-26244.herokuapp.com/travelassistant/"
         }, "TRANSLATION_API": {
-          "description": "notify fb api",
+          "description": "Translation API",
           "value": "https://immense-inlet-26244.herokuapp.com/travelassistant/"
         }
+        , "LOCATION_API": {
+          "description": "Search google places API",
+          "value": "http://rialto.myvnc.com:5050/api/bot/location/"
+        }
+
     },
     "engines": {
         "node": "5.10.1"

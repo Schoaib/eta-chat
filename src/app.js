@@ -49,6 +49,10 @@ const TRANSLATION_API = (process.env.TRANSLATION_API)
   ? process.env.TRANSLATION_API
   : config.get('env.TRANSLATION_API.value');
 
+const LOCATION_API = (process.env.LOCATION_API)
+  ? process.env.LOCATION_API
+  : config.get('env.LOCATION_API.value');
+
 const FB_TEXT_LIMIT = 640;
 
 const FACEBOOK_LOCATION = "FACEBOOK_LOCATION";
@@ -392,7 +396,7 @@ class FacebookBot {
                 // responseMessages[0].speech = responseMessages[0].speech + ' Welcome to Emirates Travel Assistant, your one stop shop for all your travel needs where you can search for flights, book your hotels and experiences on the discounted price, Translate phrases to and from languages, get weather updates.Furthermore search for sights, entertainment, transportation, local services and shops and more. Enjoy! ;)'
                 // console.log('responseMessages',responseMessages)
                 // that.doRichContentResponse(sender, responseMessages);
-                that.doTextResponse(sender, "Hi " + profile.first_name + '! Welcome to Emirates Travel Assistant, your one stop shop for all your travel needs where you can search for flights, book your hotels and experiences on the discounted price, Translate phrases to and from languages, get weather updates.Furthermore search for sights, entertainment, transportation, local services and shops and more. Enjoy! ;)' );
+                that.doTextResponse(sender, "Hi " + profile.first_name + '! Welcome to Emirates Travel Assistant, your one stop shop for all your travel needs where you can search for flights, book your hotels and experiences on the discounted price, Translate phrases to and from languages, get weather updates.Furthermore search for sights, entertainment, transportation, local services and shops and more. Enjoy! ;)');
 
                 var skyWardsJson = [
                   {
@@ -406,7 +410,8 @@ class FacebookBot {
                         text: "Login"
                       }
                     ]
-                  }];
+                  }
+                ];
 
                 that.doRichContentResponse(sender, skyWardsJson);
               } else {
@@ -497,16 +502,19 @@ class FacebookBot {
 
             if (parameters.date_time) {
               parameters.date_time = new Date(parameters.date_time).toISOString();
-            }else {
+            } else {
               parameters.date_time = new Date().toISOString();
             }
 
             if (!parameters.address || parameters.address == '')
-              parameters.address = {city : 'Dubai'}
+              parameters.address = {
+                city: 'Dubai'
+              }
 
-            if(parameters.address && parameters.address['business-name'])
-            {
-              parameters.address = {city : parameters.address['business-name']}
+            if (parameters.address && parameters.address['business-name']) {
+              parameters.address = {
+                city: parameters.address['business-name']
+              }
             }
 
             if (!parameters.outfit)
@@ -551,7 +559,23 @@ class FacebookBot {
 
             })
 
-          }else {
+          } else if (action.search("venues") > -1) {
+
+            console.log('resolvedQuery', resolvedQuery)
+            var that = this;
+            var client = new Client();
+
+            client.get(LOCATION_API + resolvedQuery, function(data, response) {
+              console.log('data', data)
+              // if (data && data.data && data.data.translations) {
+              //   // that.doTextResponse(sender, data.data.translations[0].translatedText);
+              // } else {
+              //   that.doTextResponse(sender, "Can you please be more specific?");
+              // }
+
+            })
+
+          } else {
             this.doRichContentResponse(sender, responseMessages);
           }
         } else if (this.isDefined(responseText)) {
@@ -730,7 +754,6 @@ app.get('/webhook/', (req, res) => {
     res.send('Error, wrong validation token');
   }
 });
-
 
 app.get('/sendMenu', (req, res) => {
   try {
