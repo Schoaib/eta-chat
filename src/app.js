@@ -394,6 +394,21 @@ class FacebookBot {
                 // that.doRichContentResponse(sender, responseMessages);
                 that.doTextResponse(sender, "Hi " + profile.first_name + '! Welcome to Emirates Travel Assistant, your one stop shop for all your travel needs where you can search for flights, book your hotels and experiences on the discounted price, Translate phrases to and from languages, get weather updates.Furthermore search for sights, entertainment, transportation, local services and shops and more. Enjoy! ;)' );
 
+                var skyWardsJson = [
+                  {
+                    type: 1,
+                    imageUrl: "https://s3-ap-southeast-1.amazonaws.com/tempviafone/emirates-skywards.jpg",
+                    title: "Link your Skywards account",
+                    subtitle: "Please link your skywards account to get more personalized experienced.",
+                    buttons: [
+                      {
+                        postback: "https://ekbot1.herokuapp.com/login",
+                        text: "Login"
+                      }
+                    ]
+                  }];
+
+                that.doRichContentResponse(sender, skyWardsJson);
               } else {
                 console.log('err', err)
                 that.doRichContentResponse(sender, responseMessages);
@@ -482,9 +497,7 @@ class FacebookBot {
             };
 
             console.log('parameters', parameters)
-            if (!parameters.date_time) {
-              parameters.date_time = new Date().toISOString();
-            } else {
+            if (parameters.date_time) {
               parameters.date_time = new Date(parameters.date_time).toISOString();
             }
 
