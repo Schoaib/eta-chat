@@ -504,6 +504,10 @@ class FacebookBot {
             if (!parameters.address || parameters.address == '')
               parameters.address = {city : 'Dubai'}
 
+            if(parameters.address && parameters.address["business-name"])
+            {
+              parameters.address = {city : parameters.address["business-name"]}
+            }
             args.data = parameters;
 
             client.post(WEATHER_API + 'getWeather', args, function(data, response) {
