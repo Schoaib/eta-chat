@@ -572,6 +572,7 @@ class FacebookBot {
               {
                     data.forEach(function(v,i) {
                          data[i].type = 1
+                         data[i].image_url = data[i].image
                          data[i].buttons =[{text: "Website", postback: data[i].website}]
 
                       });
