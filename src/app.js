@@ -543,8 +543,8 @@ class FacebookBot {
             client.post(WEATHER_API + 'translateLan', args, function(data, response) {
               console.log('data', data)
               if (data && data.data && data.data.translations) {
-                console.log('data.translations', data.translations)
-                that.doTextResponse(sender, data.translations[0].translatedText);
+                console.log('data.data.translations', data.data.translations)
+                that.doTextResponse(sender, data.data.translations[0].translatedText);
               } else {
                 that.doTextResponse(sender, "Can you please be more specific?");
               }
