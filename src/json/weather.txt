@@ -1,9 +1,6 @@
-Examples
+What's the weather in New York this morning?
 
-User: What's the weather in New York this morning?
-User: What about Princeton tomorrow?
-
-User: Is it going to rain this Friday?
+Is it going to rain this Friday?
 User: How about Saturday?
 User: Can you check Seattle?
 

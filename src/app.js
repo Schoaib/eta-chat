@@ -399,7 +399,7 @@ class FacebookBot {
                     type: 1,
                     imageUrl: "https://s3-ap-southeast-1.amazonaws.com/tempviafone/emirates-skywards.jpg",
                     title: "Link your Skywards account",
-                    subtitle: "Please link your skywards account to get more personalized experienced.",
+                    subtitle: "Please link your skywards account to get more personalized experience.",
                     buttons: [
                       {
                         postback: "https://ekbot1.herokuapp.com/login",
@@ -502,7 +502,7 @@ class FacebookBot {
             }
 
             if (!parameters.address)
-              parameters.address.city = 'Dubai'
+              parameters.address = {city : 'Dubai'}
 
             args.data = parameters;
 
@@ -693,6 +693,17 @@ app.get('/webhook/', (req, res) => {
     }, 3000);
   } else {
     res.send('Error, wrong validation token');
+  }
+});
+
+
+app.get('/sendMenu', (req, res) => {
+  try {
+    var parsedJSON = require('./json/menu.json');
+    console.log('parsedJSON', parsedJSON)
+    facebookBot.doRichContentResponse('1503503856363974', parsedJSON);
+  } catch (err) {
+    return res.status(400).json({status: "error", error: err});
   }
 });
 

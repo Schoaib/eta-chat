@@ -1,5 +1,3 @@
-Examples
-
-User: Translate "I love you" into French.
-User: How do you say "Santa Claus" in Finnish?
-User: What's the German word for "breakfast"?
+Translate "Where is nearest metro station?" into Arabic.
+How do you say "Thank you" in Chinese?
+What's the German word for "breakfast"?

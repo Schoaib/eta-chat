@@ -1,16 +1,14 @@
-Examples
+I need to fly from San Francisco to New York next Friday.
+Find me the cheapest flights to London for October 3.
+Check status of EK flight 604.
+Find a flight from Dubai to New York on July 16, returning July 23, for 2 people.
+I need a one-way ticket to Zimbabwe, leaving tonight.
+Find a flight from Barcelona to Cagliari for less than 200 euro
 
-User: I need to fly from San Francisco to New York next Friday.
-User: Find me the cheapest flights to London for October 3.
-User: Are there still some non-stop flights to Colorado for Christmas?
-User: Any Virgin America flights from LA to Vegas this weekend?
-User: Search for refundable flights only.
-User: When will the flight from Rome depart?
-User: Is British Airways from Gatwick to Berlin arriving on time?
-User: Check status of AA flight 100.
 
-User: Find a flight from Dublin to Copenhagen on July 16, returning July 23, for 2 people.
-User: Actually, returning July 25.
 
-User: I need a one-way ticket to Zimbabwe, leaving tonight.
-User: Find a flight from Barcelona to Cagliari for less than 200 euro
+1)	From New York to DXB on 25 Dec 2017
+2)	From DXB to New York on 4 Jan 2018
+3)	From DXB to KHI on 30 Nov 2017
+4)	From DXB to Singapore on 10 Dec 2017
+5)	From DXB to Dehli on 30 Nov 2017

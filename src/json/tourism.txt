@@ -1,12 +1,4 @@
-Examples
-
-User: Where should I stay for 5 nights in Barcelona?
-User: Show only cheap options.
-User: How about Madrid?
-
-User: What's the top rated music venue in Nashville?
-User: Show only open venues.
-User: Filter nearest.
-
-User: Show me the best sights in California that have parking and good reviews.
-User: What about in San Francisco?
+Show me the best sights in Singapore
+Popular sightseeing in London
+Things to do in Dubai
+Tourist Attractions in New York

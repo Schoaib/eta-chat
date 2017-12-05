@@ -1,0 +1,28 @@
+[
+  {
+    "type": 1,
+    "imageUrl": "https://s3-ap-southeast-1.amazonaws.com/tempviafone/flight12.PNG",
+    "title": "Explore destinations",
+    "buttons": [
+       {
+        "text": "View Details",
+        "postback": "EXPLORE_WORLD"
+      }
+    ]
+  },
+  {
+    "type": 1,
+    "imageUrl": "https://s3-ap-southeast-1.amazonaws.com/tempviafone/flight12.PNG",
+    "title": "Search flights",
+    "buttons": [
+       {
+        "text": "View Details",
+        "postback": "SEARCH_FLIGHT"
+      }
+    ]
+  }
+  // Translate
+  // Weather Information
+  // Get Deals & Offers
+
+]
