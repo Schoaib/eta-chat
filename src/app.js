@@ -501,7 +501,7 @@ class FacebookBot {
               parameters.date_time = new Date(parameters.date_time).toISOString();
             }
 
-            if (!parameters.address)
+            if (!parameters.address || parameters.address == '')
               parameters.address = {city : 'Dubai'}
 
             args.data = parameters;
