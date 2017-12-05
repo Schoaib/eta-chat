@@ -567,12 +567,13 @@ class FacebookBot {
 
             client.get(LOCATION_API + resolvedQuery, function(data, response) {
               console.log('data', data)
+              data = JSON.parse(data)
               if(data)
               {
                     data.forEach(function(v,i) {
                          data[i].type = 1;
                       });
-              that.doRichContentResponse(sender, JSON.parse(data));
+              that.doRichContentResponse(sender, data);
             }
             })
 
