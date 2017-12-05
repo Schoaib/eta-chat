@@ -569,6 +569,8 @@ class FacebookBot {
             client.get(LOCATION_API + resolvedQuery, function(data, response) {
               // console.log('data', data)
               data = JSON.parse(data)
+              console.log('data', data)
+
               if(data)
               {
                     data.forEach(function(v,i) {
