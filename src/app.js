@@ -499,8 +499,15 @@ class FacebookBot {
                   this.doTextResponse(sender, "Examples\r\nTranslate Thankyou into French. \r\nWhat's the German word for breakfast \r\nHow do you say hi in arabic \r\n");
                 }else if (resolvedQuery == "MENU_WEATHER") {
                     this.doTextResponse(sender, "Get weather updates related to outdoor activities or see if you need that umbrella.");
-                    this.doTextResponse(sender, "Examples\r\nWhat's the weather in New York this morning?\r\nWhat's the German word for \"breakfast\" \r\nHow do you say hi in arabic \r\n");
-                  }
+                    this.doTextResponse(sender, "Examples\r\nWhat's the weather in New York?\r\nHow is the weather? \r\nHow about singapore? \r\n");
+                  }else if (resolvedQuery == "MENU_DEALS") {
+                      this.doTextResponse(sender, "Get nearby deals and offers");
+
+                      var parsedJSON = require('./json/deals.json');
+                      console.log('parsedJSON', parsedJSON)
+                      this.doRichContentResponse(sender, parsedJSON);
+                    }
+
 
 
 
