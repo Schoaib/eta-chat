@@ -489,7 +489,17 @@ class FacebookBot {
             } else if (resolvedQuery == "UN_SUBSCRIBE") {
               this.doTextResponse(sender, "You will no longer receive alerts for this fare.");
 
-            }
+            }else if (resolvedQuery == "MENU_EXPLORE_WORLD") {
+              this.doTextResponse(sender, "You can search for tourist attractions, local transportation options and entertainment, as well as filter the results by distance, price and availability");
+              this.doTextResponse(sender, "Examples\r\n Best restaurants in dubai \r\n ");
+
+            }  }else if (resolvedQuery == "MENU_SEARCH_FLIGHT") {
+                this.doTextResponse(sender, "Search for flights, book flights and answer FAQ");
+                this.doTextResponse(sender, "Examples\r\n Find a flight from Dubai to Newyork on July 16, returning July 23. \r\n How do I check in online? \r\n Search flights from KHI to DXB on 12 Jan \r\nWhat's the maximum baggage size?");
+
+              }
+
+
 
           } else if (action.search("weather") > -1) {
             console.log('parameters', parameters)
