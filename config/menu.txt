@@ -1,3 +1,7 @@
+// Translate
+// Weather Information
+// Get Deals & Offers
+
 //get started
 curl -X POST -H "Content-Type: application/json" -d '{
   "setting_type":"call_to_actions",
