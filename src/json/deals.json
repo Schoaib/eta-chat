@@ -6,7 +6,7 @@
     "buttons": [
        {
         "text": "Get this deal",
-        "url": "https://ekbot1.herokuapp.com/redeem/Costa%20Cofee/1/Buy%201%20get%201%20free%20on%20all%20drinks"
+        "postback": "https://ekbot1.herokuapp.com/redeem/Costa%20Cofee/1/Buy%201%20get%201%20free%20on%20all%20drinks"
       }
     ]
   },
@@ -17,7 +17,7 @@
     "buttons": [
        {
         "text": "Book Now",
-        "postback": "https://ekbot1.herokuapp.com/redeem/Careem/1/50% discount on your Careem ride"
+        "postback": "https://ekbot1.herokuapp.com/redeem/Careem/1/50 Percent discount on your Careem ride"
       }
     ]
   },
