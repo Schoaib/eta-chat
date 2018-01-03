@@ -8,7 +8,7 @@
           "template_type": "airline_itinerary",
           "intro_message": "Here is your flight itinerary.",
           "locale": "en_US",
-          "pnr_number": "QWBXR",
+          "pnr_number": "QEWKNB",
           "passenger_info": [{
               "name": "Muhammad Shoaib Syed",
               "ticket_number": "0741234567890",
@@ -35,7 +35,7 @@
                 "airport_code": "DXB",
                 "city": "Dubai",
                 "terminal": "T3",
-                "gate": "G8"
+                "gate": "G15"
               },
               "flight_schedule": {
                 "departure_time": "2018-01-12T19:35",
