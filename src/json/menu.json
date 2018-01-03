@@ -6,7 +6,7 @@
     "buttons": [
        {
         "text": "View Details",
-        "postback": "EXPLORE_WORLD"
+        "postback": "MENU_EXPLORE_WORLD"
       }
     ]
   },
@@ -17,8 +17,21 @@
     "buttons": [
        {
         "text": "View Details",
-        "postback": "SEARCH_FLIGHT"
+        "postback": "MENU_SEARCH_FLIGHT"
+      }
+    ]
+  },
+  {
+    "type": 1,
+    "imageUrl": "http://cdn.ilovefreesoftware.com/wp-content/uploads/2016/12/multiple-ways-to-translate-text-into-multiple-languages-1.jpg",
+    "title": "Translate",
+    "buttons": [
+       {
+        "text": "View Details",
+        "postback": "MENU_TRANSLATE"
       }
     ]
   }
+
+
 ]
