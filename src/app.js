@@ -491,7 +491,7 @@ class FacebookBot {
 
             }else if (resolvedQuery == "MENU_EXPLORE_WORLD") {
               this.doTextResponse(sender, "You can search for tourist attractions, local transportation options and entertainment, as well as filter the results by distance, price and availability");
-              this.doTextResponse(sender, "Examples\r\n Best restaurants in dubai \r\n top tourist attractions in dubai \r\n");
+              this.doTextResponse(sender, "Examples\r\nBest restaurants in dubai \r\nTop tourist attractions in dubai \r\nTop destinations in singapore \r\nTourist places in london");
 
             }else if (resolvedQuery == "MENU_SEARCH_FLIGHT") {
                 this.doTextResponse(sender, "Search for flights, book flights and answer FAQ");
