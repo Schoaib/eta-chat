@@ -1,7 +1,7 @@
 [
   {
     "type": 1,
-    "imageUrl": "https://s3-ap-southeast-1.amazonaws.com/tempviafone/flight12.PNG",
+    "imageUrl": "http://blog.goodsam.com/wp-content/themes/litemag/assets/img/explore-header.jpg",
     "title": "Explore destinations",
     "buttons": [
        {
@@ -12,7 +12,7 @@
   },
   {
     "type": 1,
-    "imageUrl": "https://s3-ap-southeast-1.amazonaws.com/tempviafone/flight12.PNG",
+    "imageUrl": "https://media-cdn.tripadvisor.com/media/photo-o/0e/cd/51/c3/emirates.jpg",
     "title": "Search flights",
     "buttons": [
        {
