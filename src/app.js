@@ -418,7 +418,7 @@ class FacebookBot {
                 setTimeout(function(){
                   var parsedJSON = require('./json/menu.json');
                   console.log('parsedJSON', parsedJSON)
-                  this.doRichContentResponse(sender, parsedJSON);
+                  that.doRichContentResponse(sender, parsedJSON);
                 },8000);
 
               } else {
