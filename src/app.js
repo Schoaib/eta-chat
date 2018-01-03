@@ -424,7 +424,7 @@ class FacebookBot {
             console.log('responseMessages', responseMessages)
             console.log('flight.search')
             console.log('parameters', parameters)
-            var parsedJSON = require('./json/flight.json');
+            var parsedJSON = require('./json/flight-1.json');
             console.log('parsedJSON', parsedJSON)
             var testJson = [
               {
@@ -457,7 +457,7 @@ class FacebookBot {
                 ]
               }
             ];
-            this.doRichContentResponse(sender, testJson);
+            this.doRichContentResponse(sender, parsedJSON);
           } else if (action.search("PAY_LOAD") > -1) {
             if (resolvedQuery == "PRICE_ALERTS") {
               var customPaylod = [

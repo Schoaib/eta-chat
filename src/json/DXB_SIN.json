@@ -1,0 +1,18 @@
+[
+  {
+    "type": 1,
+    "imageUrl": "https://gateway.skyscanner.net/rasterizer/i?template=itinerary.html&width=1120&height=586&data={option: \"price\", price: \"2060\", currency: \"AED\", totalPrice: \"AED2060\", hasReturn: \"False\",   outbound: {segments_info: [{carrier_code: \"EK\", flight_number: \"1035\", departure_time: \"10/12/2017 00:00:00\"}], marketing_carrier_codes: [\"NL\"], marketing_carrier_names: [\"Emirates\"], stops: 0, stopsLabel: \"Direct\", takeOffTime: \"02:35\", landingTime: \"13:45\", dateShift: \"0\", date: \"Sun, Dec 10, 2017\", legDuration: \"7h 10m\", originAirportCode: \"DXB\", originCity: \"Dubai\", destinationAirportCode: \"SIN\", destinationCity: \"Singapore Changi\", flight_numbers: [\"1035\"]}, details_string: \"11182-1711101800--31884-0-13030-1711102115%7c13030-1711120040--31884-0-11182-1711120200\", size: 80, width: 1120, height: 586, imagePurpose: \"ITINERARY\", originatingUtid: \"269df55b-45b4-4211-be5f-03f3c6695e45\", sharingSourceId: \"903c1619-9660-4baf-8004-8fe11fe1f0e7\"}&_nc_hash=AQA_cADg0cDp8pdw",
+    "title": " Best offer",
+    "subtitle": " AED2060 1 Adult | Economy class",
+    "buttons": [
+      {
+        "postback": "https://fly10.emirates.com/IBE.aspx?pub=/english&pageurl=/SelectPrice.aspx&section=IBE&showpage=true&TID=SB&seldcity1=DXB&selacity1=JFK&selddate1=10 Dec 2017&seladults=1&selchildren=0&selinfants=0&selcabinclasstype=Economy&selcabinclass=0&resultby=0&recentsearches=true&j=t&reasoncode=RecentSearch",
+        "text": "Book this flight"
+      },
+      {
+        "text": "Set price alerts",
+        "postback": "PRICE_ALERTS"
+      }
+    ]
+  }
+]

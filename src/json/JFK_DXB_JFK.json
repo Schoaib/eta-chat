@@ -1,0 +1,16 @@
+{
+  "type": 1,
+  "imageUrl": "https://gateway.skyscanner.net/rasterizer/i?template=itinerary.html&width=1120&height=586&data={option: \"price\", price: \"5813\", currency: \"AED\", totalPrice: \"AED5813\", hasReturn: \"True\", inbound: {segments_info: [{carrier_code: \"EK\", flight_number: \"1035\", departure_time: \"04/01/2018 00:00:00\"}], marketing_carrier_codes: [\"EK\"], marketing_carrier_names: [\"Emirates\"], stops: 0, stopsLabel: \"Direct\", takeOffTime: \"08:30\", landingTime: \"13:55\", dateShift: \"0\", date: \"Thu, Jan 4, 2018\", legDuration: \"14h 25m\", originAirportCode: \"DXB\", originCity: \"New York John F. Kennedy\", destinationAirportCode: \"JFK\", destinationCity: \"Dubai\", flight_numbers: [\"1035\"]}, outbound: {\"segments_info\": [{carrier_code: \"EK\", flight_number: \"1035\", departure_time: \"25/12/2017 00:00:00\"}], marketing_carrier_codes: [\"NL\"], marketing_carrier_names: [\"Emirates\"], stops: 0, stopsLabel: \"Direct\", takeOffTime: \"23:00\", landingTime: \"20:25\", dateShift: \"0\", date: \"Mon, Dec 25, 2017\", legDuration: \"12h 25m\", originAirportCode: \"JFK\", originCity: \"New York John F. Kennedy\", destinationAirportCode: \"DXB\", destinationCity: \"Dubai\", flight_numbers: [\"1035\"]}, details_string: \"11182-1711101800--31884-0-13030-1711102115%7c13030-1711120040--31884-0-11182-1711120200\", size: 80, width: 1120, height: 586, imagePurpose: \"ITINERARY\", originatingUtid: \"269df55b-45b4-4211-be5f-03f3c6695e45\", sharingSourceId: \"903c1619-9660-4baf-8004-8fe11fe1f0e7\"}&_nc_hash=AQA_cADg0cDp8pdw",
+  "title": "Best offer",
+  "subtitle": "AED5813 1 Adult | Economy class",
+  "buttons": [
+    {
+      "postback": "https://fly10.emirates.com/IBE.aspx?pub=/english&pageurl=/SelectPrice.aspx&section=IBE&showpage=true&TID=SB&seldcity1=DXB&selacity1=JFK&selddate1=25 Dec 2017&seladate1=04 Jan 2018&seladults=1&selchildren=0&selinfants=0&selcabinclasstype=Economy&selcabinclass=0&resultby=0&recentsearches=true&j=t&reasoncode=RecentSearch",
+      "text": "Book this flight"
+    },
+    {
+      "text": "Set price alerts",
+      "postback": "PRICE_ALERTS"
+    }
+  ]
+}
