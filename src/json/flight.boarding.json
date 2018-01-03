@@ -59,12 +59,12 @@
                       }
                     }
                   },{
-                    "passenger_name": "Muhammad\/Shoaib Syed",
+                    "passenger_name": "Hasan\/Shoaib",
                     "pnr_number": "QEWKNB",
-                    "seat": "12A",
+                    "seat": "12B",
                     "logo_image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Emirates_logo.svg/200px-Emirates_logo.svg.png",
                     "header_image_url": "https:\/\/www.example.com\/en\/fb\/header.png",
-                    "qr_code": "M1Muhammad\/Shoaib Syed  QEWKNB nawouehgawgnapwi3jfa0wfh",
+                    "qr_code": "M1Hasan\/Shoaib QEWKNB nawouehgawgnapwi3jfa0wfB",
                     "above_bar_code_image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Emirates_logo.svg/200px-Emirates_logo.svg.png",
                     "auxiliary_fields": [
                       {
@@ -87,7 +87,7 @@
                       },
                       {
                         "label": "Seat",
-                        "value": "12A"
+                        "value": "12B"
                       }
                     ],
                     "flight_info": {
