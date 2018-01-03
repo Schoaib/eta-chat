@@ -491,7 +491,7 @@ class FacebookBot {
 
             }else if (resolvedQuery == "MENU_EXPLORE_WORLD") {
               this.doTextResponse(sender, "You can search for tourist attractions, local transportation options and entertainment, as well as filter the results by distance, price and availability");
-              this.doTextResponse(sender, "Examples\r\n Best restaurants in dubai \r\n ");
+              this.doTextResponse(sender, "Examples\r\n Best restaurants in dubai \r\n top tourist attractions in dubai \r\n");
 
             }else if (resolvedQuery == "MENU_SEARCH_FLIGHT") {
                 this.doTextResponse(sender, "Search for flights, book flights and answer FAQ");
@@ -584,6 +584,7 @@ class FacebookBot {
               if(data && data[0] != null && !data.Message)
               {
                     data.forEach(function(v,i) {
+                        if(data[i] != null)
                          data[i].type = 1
                          data[i].imageUrl = data[i].image
                          data[i].buttons =[{text: "Website", postback: data[i].website}]
