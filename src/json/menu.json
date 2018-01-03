@@ -32,6 +32,25 @@
       }
     ]
   }
-
-
+,  {
+    "type": 1,
+    "imageUrl": "http://mercurebomonti.com/wp-content/uploads/2015/01/weatherforecast.jpg",
+    "title": "Weather Information",
+    "buttons": [
+       {
+        "text": "View Details",
+        "postback": "MENU_WEATHER"
+      }
+    ]
+  },  {
+      "type": 1,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0070/7032/files/Blog_Banner.jpg?6842",
+      "title": "Get Deals & Offers",
+      "buttons": [
+         {
+          "text": "View Details",
+          "postback": "MENU_DEALS"
+        }
+      ]
+    }
 ]
