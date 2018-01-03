@@ -10,12 +10,12 @@
           "locale": "en_US",
           "pnr_number": "ABCDEF",
           "passenger_info": [{
-              "name": "Farbound Smith Jr",
+              "name": "Muhammad Shoaib Syed",
               "ticket_number": "0741234567890",
               "passenger_id": "p001"
             },
             {
-              "name": "Nick Jones",
+              "name": "Syed Hasan Shoaib",
               "ticket_number": "0741234567891",
               "passenger_id": "p002"
             }
@@ -23,23 +23,23 @@
           "flight_info": [{
               "connection_id": "c001",
               "segment_id": "s001",
-              "flight_number": "KL9123",
+              "flight_number": "EK602",
               "aircraft_type": "Boeing 737",
               "departure_airport": {
-                "airport_code": "SFO",
-                "city": "San Francisco",
+                "airport_code": "KHI",
+                "city": "Karachi",
                 "terminal": "T4",
                 "gate": "G8"
               },
               "arrival_airport": {
-                "airport_code": "SLC",
-                "city": "Salt Lake City",
-                "terminal": "T4",
+                "airport_code": "DXB",
+                "city": "Dubai",
+                "terminal": "T3",
                 "gate": "G8"
               },
               "flight_schedule": {
-                "departure_time": "2016-01-02T19:45",
-                "arrival_time": "2016-01-02T21:20"
+                "departure_time": "2018-01-12T19:35",
+                "arrival_time": "2018-01-12T20:50"
               },
               "travel_class": "business"
             }
