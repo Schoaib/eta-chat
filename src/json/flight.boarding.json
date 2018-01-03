@@ -58,6 +58,55 @@
                         "arrival_time": "2018-01-12T20:50"
                       }
                     }
+                  },{
+                    "passenger_name": "Muhammad\/Shoaib Syed",
+                    "pnr_number": "QEWKNB",
+                    "seat": "12A",
+                    "logo_image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Emirates_logo.svg/200px-Emirates_logo.svg.png",
+                    "header_image_url": "https:\/\/www.example.com\/en\/fb\/header.png",
+                    "qr_code": "M1Muhammad\/Shoaib Syed  QEWKNB nawouehgawgnapwi3jfa0wfh",
+                    "above_bar_code_image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Emirates_logo.svg/200px-Emirates_logo.svg.png",
+                    "auxiliary_fields": [
+                      {
+                        "label": "Terminal",
+                        "value": "Jinnah Terminal"
+                      },
+                      {
+                        "label": "Departure",
+                        "value": "12JAN 19:35"
+                      }
+                    ],
+                    "secondary_fields": [
+                      {
+                        "label": "Boarding",
+                        "value": "16:35"
+                      },
+                      {
+                        "label": "Gate",
+                        "value": "G8"
+                      },
+                      {
+                        "label": "Seat",
+                        "value": "12A"
+                      }
+                    ],
+                    "flight_info": {
+                      "flight_number": "EK602",
+                      "departure_airport": {
+                        "airport_code": "KHI",
+                        "city": "Karachi",
+                        "terminal": "Jinnah Terminal",
+                        "gate": "G8"
+                      },
+                      "arrival_airport": {
+                        "airport_code": "DXB",
+                        "city": "Dubai"
+                      },
+                      "flight_schedule": {
+                        "departure_time": "2018-01-12T19:35",
+                        "arrival_time": "2018-01-12T20:50"
+                      }
+                    }
                   }
                 ]
 
