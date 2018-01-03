@@ -1,0 +1,35 @@
+[
+  {
+    "type": 1,
+    "imageUrl": "https://cdn.marketing91.com/wp-content/uploads/2017/09/Marketing-Strategy-of-Costa-Coffee-2.jpg",
+    "title": "Costa Cofee - Buy 1 get 1 free on all drinks",
+    "buttons": [
+       {
+        "text": "Get this deal",
+        "url": "https://ekbot1.herokuapp.com/redeem/Costa%20Cofee/1/Buy%201%20get%201%20free%20on%20all%20drinks"
+      }
+    ]
+  },
+  {
+    "type": 1,
+    "imageUrl": "https://i.ytimg.com/vi/5ZNr_ojI0RQ/maxresdefault.jpg",
+    "title": "50% discount on your Careem ride",
+    "buttons": [
+       {
+        "text": "Book Now",
+        "postback": "https://ekbot1.herokuapp.com/redeem/Careem/1/50% discount on your Careem ride"
+      }
+    ]
+  },
+  {
+    "type": 1,
+    "imageUrl": "https://di5fgdew4nptq.cloudfront.net/api2/media/images/94a9e508-8e0c-e711-80d1-c81f66f7476f",
+    "title": "Complimentary park tickets @ Dubai Parks & Resorts",
+    "buttons": [
+       {
+        "text": "View Details",
+        "postback": "https://www.emiratesholidays.com/kw_en/offers/dubai-parks-and-resorts"
+      }
+    ]
+  }
+]
