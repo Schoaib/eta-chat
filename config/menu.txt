@@ -73,12 +73,12 @@ curl -X POST -H "Content-Type: application/json" -d '{
       {
                  "type":"postback",
                  "title":"Start over",
-                 "payload":"HISTORY"
+                 "payload":"MENU_MENU"
                },
       ],
     }
   ]
-}' "https://graph.facebook.com/v2.6/me/messenger_profile?access_token=EAAFW3JZAkjrwBALHjV5f81MhmKQNGkkRd2hOVoPXQo3XgfLR2QQ9yn61aAYqpgLej5ZCa9uhxvY3Vdbe5ruHAbYBlcmlevuGYxm1oRjrM0VZChYjZC4QmINOiQCRxtmqAvKGxAlBIw8jkE8K4K6RMHGd6Qhnclwz0aFdZAjNtvQZDZD"
+}' "https://graph.facebook.com/v2.6/me/messenger_profile?access_token=EAACDcONKDisBACxYcIRZBAVZCjqtFzvDms7ykFxmC9yTaPvlZAcqlsvzszSZBN2uZA5ntYoKZAO9dSHHA0NyZCz4nWoQ10drNrKB9J0UCjS6vYdZBB0AK3Y0b4DgLdjpDljd7pZAwUF10HgtxzKZB18na6o2Cgn7NkpFXMBmx5l5sCVwZDZD"
 
 
 curl -X POST -H "Content-Type: application/json" -d '{

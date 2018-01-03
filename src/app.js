@@ -415,6 +415,12 @@ class FacebookBot {
                 ];
 
                 that.doRichContentResponse(sender, skyWardsJson);
+                setTimeout(function(){
+                  var parsedJSON = require('./json/menu.json');
+                  console.log('parsedJSON', parsedJSON)
+                  this.doRichContentResponse(sender, parsedJSON);
+                },5000);
+
               } else {
                 console.log('err', err)
                 that.doRichContentResponse(sender, responseMessages);
