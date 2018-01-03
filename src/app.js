@@ -488,18 +488,16 @@ class FacebookBot {
               this.doRichContentResponse(sender, customPaylod);
             } else if (resolvedQuery == "UN_SUBSCRIBE") {
               this.doTextResponse(sender, "You will no longer receive alerts for this fare.");
-
             }else if (resolvedQuery == "MENU_EXPLORE_WORLD") {
               this.doTextResponse(sender, "You can search for tourist attractions, local transportation options and entertainment, as well as filter the results by distance, price and availability");
               this.doTextResponse(sender, "Examples\r\nBest restaurants in dubai \r\nTop tourist attractions in dubai \r\nTop destinations in singapore \r\nTourist places in london");
-
             }else if (resolvedQuery == "MENU_SEARCH_FLIGHT") {
                 this.doTextResponse(sender, "Search for flights, book flights and answer FAQ");
-                this.doTextResponse(sender, "Examples\r\n Find a flight from Dubai to Newyork on July 16, returning July 23. \r\n How do I check in online? \r\n Search flights from KHI to DXB on 12 Jan \r\nWhat's the maximum baggage size?");
-
-              }
-
-
+                this.doTextResponse(sender, "Examples\r\nFind a flight from Dubai to Newyork on July 16, returning July 23. \r\nHow do I check in online? \r\nSearch flights from KHI to DXB on 12 Jan \r\nWhat's the maximum baggage size?");
+              }else if (resolvedQuery == "MENU_TRANSLATE") {
+                  this.doTextResponse(sender, "Ask for translations when travelling in a foreign land. You can quickly switch between the many supported languages, to ensure you have the phrase when you need it");
+                  this.doTextResponse(sender, "Examples\r\nTranslate "Thankyou" into French. \r\nWhat's the German word for "breakfast" \r\nHow do you say hi in arabic \r\n);
+                }
 
           } else if (action.search("weather") > -1) {
             console.log('parameters', parameters)
