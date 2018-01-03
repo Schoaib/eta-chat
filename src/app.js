@@ -506,7 +506,13 @@ class FacebookBot {
                       var parsedJSON = require('./json/deals.json');
                       console.log('parsedJSON', parsedJSON)
                       this.doRichContentResponse(sender, parsedJSON);
-                    }
+                    }else if (resolvedQuery == "MENU_MENU") {
+                      var parsedJSON = require('./json/menu.json');
+                      console.log('parsedJSON', parsedJSON)
+                      this.doRichContentResponse('1503503856363974', parsedJSON);
+                      }
+
+
 
 
 

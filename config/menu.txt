@@ -62,17 +62,17 @@ curl -X POST -H "Content-Type: application/json" -d '{
       "call_to_actions":[
       {
         "type":"postback",
-        "title":"DFA Deals",
-        "payload":"SHOW_PUBLIC_DEALS"
+        "title":"Search flights",
+        "payload":"MENU_SEARCH_FLIGHT"
       },
       {
         "type":"postback",
-        "title":"DFA Deals Nearby",
-        "payload":"SHOW_PUBLIC_DEALS_NEARBY"
+        "title":"Deals Nearby",
+        "payload":"MENU_DEALS"
       },
       {
                  "type":"postback",
-                 "title":"History",
+                 "title":"Start over",
                  "payload":"HISTORY"
                },
       ],
