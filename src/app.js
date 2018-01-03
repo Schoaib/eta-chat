@@ -508,7 +508,6 @@ class FacebookBot {
                     this.doTextResponse(sender, "Examples\r\nWhat's the weather in New York?\r\nHow is the weather? \r\nHow about singapore? \r\n");
                   }else if (resolvedQuery == "MENU_DEALS") {
                       this.doTextResponse(sender, "Get nearby deals and offers");
-
                       var parsedJSON = require('./json/deals.json');
                       console.log('parsedJSON', parsedJSON)
                       this.doRichContentResponse(sender, parsedJSON);
@@ -800,6 +799,17 @@ app.get('/webhook/', (req, res) => {
 app.get('/sendMenu', (req, res) => {
   try {
     var parsedJSON = require('./json/menu.json');
+    console.log('parsedJSON', parsedJSON)
+    facebookBot.doRichContentResponse('1503503856363974', parsedJSON);
+  } catch (err) {
+    return res.status(400).json({status: "error", error: err});
+  }
+});
+
+
+app.get('/sendDeals', (req, res) => {
+  try {
+    var parsedJSON = require('./json/deals.json');
     console.log('parsedJSON', parsedJSON)
     facebookBot.doRichContentResponse('1503503856363974', parsedJSON);
   } catch (err) {
