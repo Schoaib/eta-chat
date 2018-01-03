@@ -13,10 +13,10 @@
                     "passenger_name": "Muhammad\/Shoaib Syed",
                     "pnr_number": "QEWKNB",
                     "seat": "12A",
-                    "logo_image_url": "https://fly10.ek.aero/english/images/Inline_Logo_global_tcm233-4096794.svg",
+                    "logo_image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Emirates_logo.svg/200px-Emirates_logo.svg.png",
                     "header_image_url": "https:\/\/www.example.com\/en\/fb\/header.png",
                     "qr_code": "M1Muhammad\/Shoaib Syed  QEWKNB nawouehgawgnapwi3jfa0wfh",
-                    "above_bar_code_image_url": "https:\/\/www.example.com\/en\/PLAT.png",
+                    "above_bar_code_image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Emirates_logo.svg/200px-Emirates_logo.svg.png",
                     "auxiliary_fields": [
                       {
                         "label": "Terminal",
