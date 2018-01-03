@@ -24,11 +24,11 @@
               "connection_id": "c001",
               "segment_id": "s001",
               "flight_number": "EK602",
-              "aircraft_type": "Boeing 737",
+              "aircraft_type": "Boeing 380",
               "departure_airport": {
                 "airport_code": "KHI",
                 "city": "Karachi",
-                "terminal": "T4",
+                "terminal": "Jinnah Terminal",
                 "gate": "G8"
               },
               "arrival_airport": {
