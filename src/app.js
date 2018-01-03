@@ -496,8 +496,13 @@ class FacebookBot {
                 this.doTextResponse(sender, "Examples\r\nFind a flight from Dubai to Newyork on July 16, returning July 23. \r\nHow do I check in online? \r\nSearch flights from KHI to DXB on 12 Jan \r\nWhat's the maximum baggage size?");
               }else if (resolvedQuery == "MENU_TRANSLATE") {
                   this.doTextResponse(sender, "Ask for translations when travelling in a foreign land. You can quickly switch between the many supported languages, to ensure you have the phrase when you need it");
-                  this.doTextResponse(sender, "Examples\r\nTranslate "Thankyou" into French. \r\nWhat's the German word for "breakfast" \r\nHow do you say hi in arabic \r\n);
-                }
+                  this.doTextResponse(sender, "Examples\r\nTranslate Thankyou into French. \r\nWhat's the German word for breakfast \r\nHow do you say hi in arabic \r\n");
+                }else if (resolvedQuery == "MENU_WEATHER") {
+                    this.doTextResponse(sender, "Get weather updates related to outdoor activities or see if you need that umbrella.");
+                    this.doTextResponse(sender, "Examples\r\nWhat's the weather in New York this morning?\r\nWhat's the German word for \"breakfast\" \r\nHow do you say hi in arabic \r\n");
+                  }
+
+
 
           } else if (action.search("weather") > -1) {
             console.log('parameters', parameters)
