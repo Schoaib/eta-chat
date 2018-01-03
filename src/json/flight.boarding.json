@@ -10,56 +10,50 @@
                 "locale": "en_US",
                 "boarding_pass": [
                   {
-                    "passenger_name": "SMITH\/NICOLAS",
+                    "passenger_name": "Muhammad\/Shoaib Syed",
                     "pnr_number": "QEWKNB",
-                    "seat": "74J",
+                    "seat": "12A",
                     "logo_image_url": "https://fly10.ek.aero/english/images/Inline_Logo_global_tcm233-4096794.svg",
                     "header_image_url": "https:\/\/www.example.com\/en\/fb\/header.png",
-                    "qr_code": "M1SMITH\/NICOLAS  QEWKNB nawouehgawgnapwi3jfa0wfh",
-                    "above_bar_code_image_url": "https:\/\/www.example.com\/en\/PLAT.png",
                     "auxiliary_fields": [
                       {
                         "label": "Terminal",
-                        "value": "T3"
+                        "value": "Jinnah Terminal"
                       },
                       {
                         "label": "Departure",
-                        "value": "12DEC 21:30"
+                        "value": "12JAN 19:35"
                       }
                     ],
                     "secondary_fields": [
                       {
                         "label": "Boarding",
-                        "value": "21:00"
+                        "value": "16:35"
                       },
                       {
                         "label": "Gate",
-                        "value": "B12"
+                        "value": "G8"
                       },
                       {
                         "label": "Seat",
-                        "value": "74J"
-                      },
-                      {
-                        "label": "Sec.Nr.",
-                        "value": "003"
+                        "value": "12A"
                       }
                     ],
                     "flight_info": {
-                      "flight_number": "EK532",
+                      "flight_number": "EK602",
                       "departure_airport": {
-                        "airport_code": "DXB",
-                        "city": "Dubai",
-                        "terminal": "T3",
-                        "gate": "B12"
+                        "airport_code": "KHI",
+                        "city": "Karachi",
+                        "terminal": "Jinnah Terminal",
+                        "gate": "G8"
                       },
                       "arrival_airport": {
-                        "airport_code": "COK",
-                        "city": "Kochi"
+                        "airport_code": "DXB",
+                        "city": "Dubai"
                       },
                       "flight_schedule": {
-                        "departure_time": "2017-12-12T21:30",
-                        "arrival_time": "2017-12-13T03:05"
+                        "departure_time": "2018-01-12T19:35",
+                        "arrival_time": "2018-01-12T20:50"
                       }
                     }
                   }
