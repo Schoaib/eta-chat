@@ -42,7 +42,7 @@
                 "arrival_time": "2016-01-02T21:20"
               },
               "travel_class": "business"
-            },
+            }
           ],
           "passenger_segment_info": [{
               "segment_id": "s001",
@@ -55,7 +55,7 @@
               "passenger_id": "p002",
               "seat": "12B",
               "seat_type": "Business"
-            },
+            }
           ],
           "price_info": [{
             "title": "Fuel surcharge",
