@@ -59,13 +59,13 @@
           ],
           "price_info": [{
             "title": "Fuel surcharge",
-            "amount": "1597",
-            "currency": "USD"
+            "amount": "100",
+            "currency": "AED"
           }],
-          "base_price": "12206",
-          "tax": "200",
-          "total_price": "14003",
-          "currency": "USD"
+          "base_price": "500",
+          "tax": "20",
+          "total_price": "620",
+          "currency": "AED"
         }
       }
     }
