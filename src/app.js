@@ -812,7 +812,7 @@ app.get('/sendDeals', (req, res) => {
     var parsedJSON = require('./json/deals.json');
     console.log('parsedJSON', parsedJSON)
     facebookBot.doRichContentResponse('1503503856363974', parsedJSON);
-  } catch (err) { 
+  } catch (err) {
     return res.status(400).json({status: "error", error: err});
   }
 });
