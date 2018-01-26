@@ -13,8 +13,8 @@ Then,
 ```bash
 docker run -it --name fb_bot \
            -p <your_desired_port>:5000 \
-           -e APIAI_ACCESS_TOKEN="" \
-           -e FB_PAGE_ACCESS_TOKEN="" \
+           -e APIAI_ACCESS_TOKEN=" " \
+           -e FB_PAGE_ACCESS_TOKEN=" " \
            -e FB_VERIFY_TOKEN="emirates-ta" \
            -e APIAI_LANG="en" \
            xvir/api-ai-facebook
