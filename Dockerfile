@@ -5,7 +5,7 @@ RUN mkdir -p /usr/app/src
 WORKDIR /usr/app
 COPY . /usr/app
 
-EXPOSE 5000
+EXPOSE 8080
 
 RUN npm install
 CMD ["npm", "start"]
