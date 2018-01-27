@@ -54,3 +54,6 @@ spec:
         image: gcr.io/emirates-d5961/schoaib/eta-chat:master
         ports:
           - containerPort: 8080
+        env:
+          - name: PORT
+            value: '8080'
