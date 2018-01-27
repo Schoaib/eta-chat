@@ -837,6 +837,10 @@ app.get('/sendFlightCheckIn', (req, res) => {
   }
 });
 
+app.get('/', (req, res) => {
+return res.status(200).json({});
+});
+
 app.get('/sendBookingItinerary', (req, res) => {
   try {
     var parsedJSON = require('./json/booking.itinerary.json');
