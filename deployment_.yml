@@ -1,0 +1,67 @@
+# Copyright 2016 Google Inc. All Rights Reserved.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#    http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: eta-service
+  namespace: echo
+spec:
+  type: NodePort
+  ports:
+  - port: 80
+    targetPort: 8080
+    protocol: TCP
+    name: http
+  selector:
+    app: eta-backend
+
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: eta-backend
+  namespace: echo
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: eta-backend
+    spec:
+      containers:
+      - name: esp
+        image: gcr.io/endpoints-release/endpoints-runtime:1
+        args: [
+          "--http_port=8080",
+          "--backend=127.0.0.1:8081",
+          "--service=echo1.endpoints.emirates-d5961.cloud.goog",
+          "--version=2018-01-27r2",
+          "--healthz=healthz",
+        ]
+        ports:
+          - containerPort: 8080
+        readinessProbe:
+          httpGet:
+            path: /healthz
+            port: 8080
+          initialDelaySeconds: 20
+          timeoutSeconds: 1
+      - name: eta
+        image: gcr.io/emirates-d5961/schoaib/eta-chat:master
+        ports:
+          - containerPort: 8081
+        env:
+          - name: PORT
+            value: '8081'
