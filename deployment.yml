@@ -15,54 +15,53 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: esp-echo
+  name: eta-service
   namespace: echo
 spec:
+  type: NodePort
   ports:
   - port: 80
-    targetPort: 8081
+    targetPort: 8080
     protocol: TCP
     name: http
   selector:
-    app: esp-echo
-  type: LoadBalancer
+    app: eta-backend
+
 ---
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: esp-echo
+  name: eta-backend
   namespace: echo
 spec:
   replicas: 1
   template:
     metadata:
       labels:
-        app: esp-echo
+        app: eta-backend
     spec:
       containers:
-      # [START esp]
-      - name: esp1
+      - name: esp
         image: gcr.io/endpoints-release/endpoints-runtime:1
         args: [
-          "--http_port", "8081",
-          "--backend", "127.0.0.1:8080",
-          "--service", "echo1.endpoints.emirates-d5961.cloud.goog",
-          "--version", "2018-01-27r2",
-          "--healthz","healthz",
+          "--http_port=8080",
+          "--backend=127.0.0.1:8081",
+          "--service=echo1.endpoints.emirates-d5961.cloud.goog",
+          "--version=2018-01-27r2",
+          "--healthz=healthz",
         ]
-      # [END esp]
         ports:
-          - containerPort: 8081
+          - containerPort: 8080
         readinessProbe:
           httpGet:
             path: /healthz
-            port: 8081
+            port: 8080
           initialDelaySeconds: 20
           timeoutSeconds: 1
-      - name: echo
+      - name: eta
         image: gcr.io/emirates-d5961/schoaib/eta-chat:master
         ports:
-          - containerPort: 8080
+          - containerPort: 8081
         env:
           - name: PORT
-            value: '8080'
+            value: '8081'
