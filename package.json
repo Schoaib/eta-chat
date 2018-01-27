@@ -5,9 +5,11 @@
   "main": "src/app.js",
   "scripts": {
     "start": "node src/app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "samples lint",
+    "pretest": "npm run lint",
+    "test": "samples test run --cmd ava -- -T 20s --verbose test/*.test.js"
   },
-  "author": "Danil Skachkov <danil.skachkov@speaktoit.com> (https://api.ai)",
+  "author": "Syed Shoaib <syedschoaib@icloud.com> (https://syedshoaib.me)",
   "license": "ISC",
   "dependencies": {
     "apiai": "^3.0.3",
@@ -27,8 +29,15 @@
     "request": "^2.73.0",
     "safe-buffer": "5.1.1"
   },
+  "devDependencies": {
+    "@google-cloud/nodejs-repo-tools": "1.4.17",
+    "ava": "0.21.0",
+    "proxyquire": "1.8.0",
+    "sinon": "3.2.0",
+    "supertest": "3.0.0"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/api-ai/api-ai-facebook"
+    "url": "https://github.com/Schoaib/eta-chat"
   }
 }
