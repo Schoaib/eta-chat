@@ -50,6 +50,12 @@ spec:
       # [END esp]
         ports:
           - containerPort: 8081
+        readinessProbe:
+          httpGet:
+            path: /healthz
+            port: 8081
+          initialDelaySeconds: 20
+          timeoutSeconds: 1
       - name: echo
         image: gcr.io/emirates-d5961/schoaib/eta-chat:master
         ports:
