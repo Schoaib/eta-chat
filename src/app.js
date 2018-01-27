@@ -783,8 +783,9 @@ class FacebookBot {
 let facebookBot = new FacebookBot();
 
 const app = express();
+app.set('case sensitive routing', true);
+app.use(bodyParser.json());
 
-app.use(bodyParser.text({type: 'application/json'}));
 
 app.get('/webhook/', (req, res) => {
   if (req.query['hub.verify_token'] === FB_VERIFY_TOKEN) {
@@ -937,3 +938,4 @@ if (module === require.main) {
 // [END app]
 
 facebookBot.doSubscribeRequest();
+module.exports = app;

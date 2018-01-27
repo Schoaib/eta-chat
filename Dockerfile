@@ -5,7 +5,6 @@ RUN mkdir -p /usr/app/src
 WORKDIR /usr/app
 COPY . /usr/app
 
-EXPOSE 8080
-
 RUN npm install
-CMD ["npm", "start"]
+ENV PORT=8080
+ENTRYPOINT ["npm", "start"]
