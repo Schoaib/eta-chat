@@ -911,8 +911,29 @@ app.post('/echo', (req, res) => {
   res.status(200).json({ message: req.body.message }).end();
 });
 
-app.listen(REST_PORT, () => {
-  console.log('Rest service ready on port ' + REST_PORT);
-});
+
+
+function authInfoHandler (req, res) {
+  let authUser = { id: 'anonymous' };
+  const encodedInfo = req.get('X-Endpoint-API-UserInfo');
+  if (encodedInfo) {
+    authUser = JSON.parse(Buffer.from(encodedInfo, 'base64'));
+  }
+  res.status(200).json(authUser).end();
+}
+
+app.get('/auth/info/googlejwt', authInfoHandler);
+app.get('/auth/info/googleidtoken', authInfoHandler);
+
+if (module === require.main) {
+  // [START listen]
+  const PORT = process.env.PORT || 8080;
+  app.listen(PORT, () => {
+    console.log(`App listening on port ${PORT}`);
+    console.log('Press Ctrl+C to quit.');
+  });
+  // [END listen]
+}
+// [END app]
 
 facebookBot.doSubscribeRequest();
