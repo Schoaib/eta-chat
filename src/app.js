@@ -28,6 +28,8 @@ const Client = require('node-rest-client').Client;
 const QrCode = require('qrcode-reader');
 const utils = require('./utils/Common');
 const _ = require('lodash');
+const Buffer = require('safe-buffer').Buffer;
+
 
 const REST_PORT = (process.env.PORT || 80);
 const APIAI_ACCESS_TOKEN = (process.env.APIAI_ACCESS_TOKEN)
@@ -903,6 +905,10 @@ app.post('/webhook/', (req, res) => {
     return res.status(400).json({status: "error", error: err});
   }
 
+});
+
+app.post('/echo', (req, res) => {
+  res.status(200).json({ message: req.body.message }).end();
 });
 
 app.listen(REST_PORT, () => {
