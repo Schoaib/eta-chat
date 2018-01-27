@@ -46,8 +46,8 @@ spec:
         args: [
           "--http_port=8080",
           "--backend=127.0.0.1:8081",
-          "--service=echo1.endpoints.emirates-d5961.cloud.goog",
-          "--version=2018-01-27r2",
+          "--service=eta.endpoints.emirates-d5961.cloud.goog",
+          "--version=2018-01-27r0",
           "--healthz=healthz",
         ]
         ports:
