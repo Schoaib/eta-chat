@@ -31,7 +31,6 @@ const _ = require('lodash');
 const Buffer = require('safe-buffer').Buffer;
 
 
-const REST_PORT = (process.env.PORT || 80);
 const APIAI_ACCESS_TOKEN = (process.env.APIAI_ACCESS_TOKEN)
   ? process.env.APIAI_ACCESS_TOKEN
   : config.get('env.APIAI_ACCESS_TOKEN.value');
