@@ -18,7 +18,7 @@ metadata:
   name: eta-service
   namespace: echo
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
   - port: 80
     targetPort: 8080
